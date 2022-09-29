@@ -6,7 +6,7 @@ function Header() {
   return (
     <Grid>
       <LnTypo variant="h1">
-        Hello world
+        Hello Liane
       </LnTypo>
     </Grid>
   )
