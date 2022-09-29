@@ -54,3 +54,7 @@ Reasons to commit:
   'test'
 ]
 ```
+
+## TODO
+
+- Add docker to start DB (2nd stage of development)
