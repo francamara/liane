@@ -59,7 +59,7 @@
         "named": "never"
       }
     ],
-    "no-console": "off",
+    "no-console": 1,
     "no-tabs": "off",
     "eqeqeq": "off"
   },
