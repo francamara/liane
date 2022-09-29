@@ -4,7 +4,7 @@ import React from 'react'
 function LnTypo(props) {
   return (
     <Typography {...props}>
-        {props.children}
+      {props.children}
     </Typography>
   )
 }
