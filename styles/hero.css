@@ -1,0 +1,19 @@
+#aboutMe {
+  justify-items: center;
+  align-items: center;
+}
+
+#profilePictureContainer {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+
+#profilePicture {
+  display: flex;
+  justify-content: center;
+  border-radius: 25vh;
+  width: 25vh;
+  height: 25vh;
+  background: pink;
+}

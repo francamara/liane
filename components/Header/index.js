@@ -1,14 +1,18 @@
-import { Grid } from '@mui/material'
+import { Button } from '@mui/material'
 import React from 'react'
-import LnTypo from '../LnTypo'
 
 function Header() {
   return (
-    <Grid>
-      <LnTypo variant="h1">
-        Hello Liane
-      </LnTypo>
-    </Grid>
+    <div style={{ height: '100vh' }}>
+      <div id='portada' >
+        <div id='navbar'>
+          <Button variant='text'> Inicio</Button>
+        </div>
+      </div>
+      <div id='bannerPodcast'> Firma Liane
+
+      </div>
+    </div>
   )
 }
 

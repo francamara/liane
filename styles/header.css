@@ -1,0 +1,15 @@
+#portada {
+  height: 80vh;
+  background-image: url('https://cdn.discordapp.com/attachments/422548464644259841/1025451777484652665/medieval_town_by_writenrun_d5rh7yx-fullview.jpg');
+
+}
+
+#bannerPodcast {
+  height: 20vh;
+  background: #0095da;
+}
+
+#navbar {
+  display: flex;
+  justify-content: center;
+}
