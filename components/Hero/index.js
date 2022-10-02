@@ -2,6 +2,7 @@ import { Grid, Divider } from '@mui/material'
 import React from 'react'
 import LnTypo from '../LnTypo'
 
+//TODO arreglar tamaño y comentar
 function Hero() {
   return (
     <div>
