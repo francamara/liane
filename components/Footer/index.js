@@ -7,7 +7,7 @@ import InstagramIcon from '@mui/icons-material/Instagram'
 function Footer() {
   return (
     //div fijando altura para PC, TODO hacer que todo funque con grid y usar xs y sm para hacer todo responsive
-    <div style={{ height: '40vh', backgroundColor: '#F4F0DB' }}>
+    <div style={{ height: '30vh', backgroundColor: '#F4F0DB', display: 'flex', alignItems: 'center' }}>
 
       {/*contenedor del footer, con sus tres items, dos de los cuales tambien son contenedores*/}
       <Grid container direction='row' justifyContent='space-around'>

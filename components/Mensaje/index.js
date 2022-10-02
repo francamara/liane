@@ -1,0 +1,44 @@
+import { Grid, Typography } from '@mui/material'
+import React from 'react'
+
+function Mensaje() {
+  return (
+    //div fijando altura para PC, TODO hacer que todo funque con grid y usar xs y sm para hacer todo responsive
+    <div style={{ height: '70vh', backgroundColor: '#453B3B', display: 'flex', alignItems: 'center' }}>
+      {/*contenedor del Mensaje*/}
+      <Grid container justifyContent='center' spacing={8}>
+
+        {/*foto asociada a mensaje*/}
+        <Grid item xs={3} container justifyContent='flex-end'>
+          <Typography variant='h1'>
+            FOTO
+          </Typography>
+        </Grid>
+
+        {/*texto mensaje*/}
+        <Grid item xs={5}>
+          <Typography variant='body1' align='justify' mb={4}>
+            Elit culpa sit ea nisi aliqua proident. Occaecat dolor laborum incididunt eu nostrud deserunt irure occaecat magna exercitation duis.
+            Ullamco duis consectetur voluptate sunt deserunt nisi nostrud consectetur dolor.
+            Irure irure ut officia dolore id pariatur excepteur nostrud voluptate qui. Proident duis ut reprehenderit pariatur ullamco qui occaecat do aute non anim.
+            Esse nostrud incididunt adipisicing est sunt excepteur consectetur. Magna quis excepteur consectetur labore dolore ea elit Lorem ut ex.
+            Magna aliquip duis ea fugiat. Enim exercitation ad irure ipsum Lorem eiusmod duis sunt. Voluptate dolore excepteur sit consectetur tempor sit eu dolor commodo.
+            Veniam laborum labore qui sint mollit aliqua. Excepteur cupidatat veniam anim non anim irure tempor. Occaecat do duis elit aliquip nulla cupidatat nisi aliquip sunt.
+          </Typography>
+
+          <Typography variant='body1' align='justify'>
+            Esse nostrud incididunt adipisicing est sunt excepteur consectetur. Magna quis excepteur consectetur labore dolore ea elit Lorem ut ex.
+            Elit culpa sit ea nisi aliqua proident. Occaecat dolor laborum incididunt eu nostrud deserunt irure occaecat magna exercitation duis.
+            Irure irure ut officia dolore id pariatur excepteur nostrud voluptate qui. Proident duis ut reprehenderit pariatur ullamco qui occaecat do aute non anim.
+            Ullamco duis consectetur voluptate sunt deserunt nisi nostrud consectetur dolor.
+            Magna aliquip duis ea fugiat. Enim exercitation ad irure ipsum Lorem eiusmod duis sunt. Voluptate dolore excepteur sit consectetur tempor sit eu dolor commodo.
+            Veniam laborum labore qui sint mollit aliqua. Excepteur cupidatat veniam anim non anim irure tempor. Occaecat do duis elit aliquip nulla cupidatat nisi aliquip sunt.
+          </Typography>
+        </Grid>
+
+      </Grid>
+    </div >
+  )
+}
+
+export default Mensaje
