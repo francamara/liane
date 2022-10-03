@@ -15,5 +15,14 @@
   border-radius: 25vh;
   width: 25vh;
   height: 25vh;
-  background: pink;
+}
+
+#upperSection {
+  display: flex;
+  height: 50vh;
+}
+
+#lowerSection {
+  display: flex;
+  height: 50vh;
 }

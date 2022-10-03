@@ -2,14 +2,14 @@
 import { Grid, Divider } from '@mui/material'
 import React from 'react'
 import LnTypo from '../LnTypo'
-import aboutMePicture from '../../public/aboutMePicture.jpg'
+//import aboutMePicture from '../../public/aboutMePicture.jpg'
 
 
 //TODO arreglar tamaño y comentar
 function Hero() {
   return (
-    <div>
-      <Grid container spacing={4}>
+    <div style={{ height: '100vh' }}>
+      <Grid container spacing={4} id='upperSection' >
         <Grid item sm={3}>
           <LnTypo variant='p'>  elit incididunt et in in enim exercitation et dolore proident cillum. Incididunt elit sit magna non culpa ea. Anim fugiat velit tempor incididunt. Lorem eiusmod consequat eiusmod minim dolore culpa excepteur.</LnTypo>
         </Grid>
@@ -22,12 +22,13 @@ function Hero() {
 
       </Grid>
       <Divider></Divider>
-      <Grid container spacing={8}>
+      <Grid container spacing={8} id='lowerSection' >
         <Grid item md={5}>
           <div id='profilePictureContainer'>
             <img
+              id='profilePicture'
               alt='liane'
-              src={aboutMePicture} />
+              src='/aboutMePicture.jpg' />
           </div>
 
         </Grid>
