@@ -1,6 +1,9 @@
+
 import { Grid, Divider } from '@mui/material'
 import React from 'react'
 import LnTypo from '../LnTypo'
+import aboutMePicture from '../../public/aboutMePicture.jpg'
+
 
 //TODO arreglar tamaño y comentar
 function Hero() {
@@ -22,8 +25,11 @@ function Hero() {
       <Grid container spacing={8}>
         <Grid item md={5}>
           <div id='profilePictureContainer'>
-            <div id='profilePictrue'>pfp</div>
+            <img
+              alt='liane'
+              src={aboutMePicture} />
           </div>
+
         </Grid>
         <Grid item md={7}>
           <LnTypo variant='h4'>Quien Soy</LnTypo>

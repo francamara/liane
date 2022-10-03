@@ -11,5 +11,27 @@
 
 #navbar {
   display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 3vh;
+}
+
+#myButton {
+  font-family: 'Courier New', Courier, monospace;
+  background: transparent;
+  color: rgb(29, 29, 29);
+  border-radius: 0px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 4px;
+}
+
+#myButton:hover {
+  background: #ffe7a3;
+  color: rgb(29, 29, 29);
+}
+
+#myButton:active {
+  background: white;
+  color: rgb(29, 29, 29);
 }
