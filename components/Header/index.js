@@ -21,16 +21,16 @@ function Header() {
 
 
         </div>
-        <div>
-          <img id='signatureLiane' src='/LOGO-LIANE.svg'></img>
-        </div>
+
+        <img className='signatureLiane' src='/Logo-Liane.svg'></img>
+
       </div>
       <div id='bannerPodcast'>
-        <img src='' alt='fotoparaelpodcast'></img>
+        <img id='bannerPodcastPicture' src='/bannerPodcastPicture.svg' alt='fotoparaelpodcast'></img>
         <img id='bannerPodcastLogo' src='/Logo-para-banner-podcast.svg'>
           {/*TODO meter grid container direction row para organizar los elementos del banner*/}
         </img>
-        <LnTypo> Un podcast para no fundamentalistas</LnTypo>
+        <LnTypo id='bannerSloganPodcast' > "Un podcast para no fundamentalistas" </LnTypo>
       </div>
     </div>
   )

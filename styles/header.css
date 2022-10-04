@@ -1,23 +1,26 @@
 #portada {
   height: 80vh;
   background-image: url('https://cdn.discordapp.com/attachments/422548464644259841/1025451777484652665/medieval_town_by_writenrun_d5rh7yx-fullview.jpg');
+
 }
 
-#signatureLiane {
-  max-width: 600px;
+.signatureLiane {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 300px;
   height: auto;
-
+  position: absolute;
+  bottom: 10vh;
 
 }
 
 #bannerPodcast {
   display: flex;
-  height: 20vh;
-  max-height: 20vh;
-  width: 100vw;
-  max-width: 100vw;
   background: #255fca;
   justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
 #bannerPodcastLogo {
@@ -25,6 +28,18 @@
 
   min-height: 0;
   max-height: 20vh;
+}
+
+#bannerPodcastPicture {
+  border-radius: 10vh;
+  height: 10vh;
+  width: 10vw;
+}
+
+#bannerSloganPodcast {
+  font-weight: bold;
+  color: white;
+
 }
 
 #navbar {

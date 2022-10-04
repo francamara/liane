@@ -13,8 +13,8 @@
   display: flex;
   justify-content: center;
   border-radius: 25vh;
-  width: 25vh;
-  height: 25vh;
+  width: 5vw;
+  height: auto;
 }
 
 #upperSection {

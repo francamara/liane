@@ -2,7 +2,6 @@
 import { Grid, Divider } from '@mui/material'
 import React from 'react'
 import LnTypo from '../LnTypo'
-//import aboutMePicture from '../../public/aboutMePicture.jpg'
 
 
 //TODO arreglar tamaño y comentar
