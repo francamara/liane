@@ -14,7 +14,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Caecilia',
+    //fontFamily: 'Caecilia',
     h1: {
       color: '#19857b'
     }

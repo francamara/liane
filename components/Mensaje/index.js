@@ -5,7 +5,7 @@ import LnTypo from '../LnTypo'
 function Mensaje() {
   return (
     //TODO hacer que el mensaje y posiblemente la foto se levanten dinamicamente, futuramente modificable por superuser
-    <div style={{ height: '70vh', backgroundColor: '#453B3B', display: 'flex', alignItems: 'center' }}>
+    <div id='mensaje' style={{ height: '70vh', backgroundColor: '#453B3B', display: 'flex', alignItems: 'center' }}>
       {/*contenedor del Mensaje*/}
       <Grid container justifyContent='center' spacing={8}>
 

@@ -1,7 +1,8 @@
 #portada {
   height: 80vh;
-  background-image: url('https://cdn.discordapp.com/attachments/422548464644259841/1025451777484652665/medieval_town_by_writenrun_d5rh7yx-fullview.jpg');
-
+  background-image: url('https://img.freepik.com/free-photo/paper-texture-colorful-abstract-background_53876-98401.jpg?w=1800&t=st=1664921613~exp=1664922213~hmac=2f3fe6e0eb30d35c388524147812ee2269d8d0ec449b6f11a8a5e211602e65f4');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .signatureLiane {
@@ -11,8 +12,7 @@
   width: 300px;
   height: auto;
   position: absolute;
-  bottom: 10vh;
-
+  bottom: 20vh;
 }
 
 #bannerPodcast {
@@ -24,7 +24,7 @@
 }
 
 #bannerPodcastLogo {
-
+  width: 40vw;
 
   min-height: 0;
   max-height: 20vh;
@@ -32,31 +32,30 @@
 
 #bannerPodcastPicture {
   border-radius: 10vh;
-  height: 10vh;
-  width: 10vw;
+  height: 15vh;
+  width: auto;
 }
 
 #bannerSloganPodcast {
-  font-weight: bold;
   color: white;
-
 }
 
 #navbar {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3vh;
+  gap: 2vh;
 }
 
 #myButton {
-  font-family: 'Courier New', Courier, monospace;
-  background: transparent;
+  /* font-family: 'Courier New', Courier, monospace;
+  background: transparent; */
   color: rgb(29, 29, 29);
   border-radius: 0px;
-  font-weight: bold;
-  text-decoration: none;
+  /* font-weight: bold;
+  text-decoration: none; */
   padding: 4px;
+  text-transform: none;
 }
 
 #myButton:hover {

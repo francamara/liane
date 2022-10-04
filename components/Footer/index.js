@@ -8,7 +8,7 @@ import LnTypo from '../LnTypo'
 function Footer() {
   return (
     //TODO hacer que todo funque con grid y usar xs y sm para hacer todo responsive
-    <div style={{ height: '30vh', backgroundColor: '#F4F0DB', display: 'flex', alignItems: 'center' }}>
+    <div id='footer' style={{ height: '30vh', backgroundColor: '#F4F0DB', display: 'flex', alignItems: 'center' }}>
 
       {/*contenedor del footer, con sus tres items, dos de los cuales tambien son contenedores*/}
       <Grid container direction='row' justifyContent='space-around'>
@@ -36,6 +36,12 @@ function Footer() {
           <Grid item xs>
             <Link href="/">
               <a>Home</a>
+            </Link>
+          </Grid>
+
+          <Grid item xs>
+            <Link href="mailto:maildeliane@provider.sfx">
+              <a>Escríbeme</a>
             </Link>
           </Grid>
 
