@@ -19,8 +19,16 @@ a {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: black;
   }
+}
+
+@font-face {
+  font-family: Caecilia;
+  src: url("/fonts/Caecilia.woff2");
+  format: ("woff2");
+  font-display: swap;
 }

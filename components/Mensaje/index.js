@@ -1,5 +1,6 @@
-import { Grid, Typography } from '@mui/material'
+import { Grid } from '@mui/material'
 import React from 'react'
+import LnTypo from '../LnTypo'
 
 function Mensaje() {
   return (
@@ -10,14 +11,14 @@ function Mensaje() {
 
         {/*foto asociada a mensaje*/}
         <Grid item xs={3} container justifyContent='flex-end'>
-          <Typography variant='h1'>
+          <LnTypo variant='h1'>
             FOTO
-          </Typography>
+          </LnTypo>
         </Grid>
 
         {/*texto mensaje*/}
         <Grid item xs={5}>
-          <Typography variant='body1' align='justify' mb={4}>
+          <LnTypo variant='body1' align='justify' mb={4}>
             Elit culpa sit ea nisi aliqua proident. Occaecat dolor laborum incididunt eu nostrud
             deserunt irure occaecat magna exercitation duis.Ullamco duis consectetur voluptate
             sunt deserunt nisi nostrud consectetur dolor.Irure irure ut officia dolore id pariatur
@@ -28,9 +29,9 @@ function Mensaje() {
             sunt. Voluptate dolore excepteur sit consectetur tempor sit eu dolor commodo. Veniam
             laborum labore qui sint mollit aliqua. Excepteur cupidatat veniam anim non anim irure
             tempor. Occaecat do duis elit aliquip nulla cupidatat nisi aliquip sunt.
-          </Typography>
+          </LnTypo>
 
-          <Typography variant='body1' align='justify' mb={4}>
+          <LnTypo variant='body1' align='justify' mb={4}>
             Elit culpa sit ea nisi aliqua proident. Occaecat dolor laborum incididunt eu nostrud
             deserunt irure occaecat magna exercitation duis.Ullamco duis consectetur voluptate
             sunt deserunt nisi nostrud consectetur dolor.Irure irure ut officia dolore id pariatur
@@ -41,7 +42,7 @@ function Mensaje() {
             sunt. Voluptate dolore excepteur sit consectetur tempor sit eu dolor commodo. Veniam
             laborum labore qui sint mollit aliqua. Excepteur cupidatat veniam anim non anim irure
             tempor. Occaecat do duis elit aliquip nulla cupidatat nisi aliquip sunt.
-          </Typography>
+          </LnTypo>
         </Grid>
 
       </Grid>

@@ -1,8 +1,9 @@
-import { Grid, Typography } from '@mui/material'
+import { Grid } from '@mui/material'
 import Link from 'next/link'
 import React from 'react'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import InstagramIcon from '@mui/icons-material/Instagram'
+import LnTypo from '../LnTypo'
 
 function Footer() {
   return (
@@ -17,13 +18,13 @@ function Footer() {
         <Grid item xs={4} container direction='column' spacing={2} alignItems='center'>
 
           <Grid item xs>
-            <Typography variant='h2'>LOGO</Typography>
+            <LnTypo variant='h2'>LOGO</LnTypo>
           </Grid>
 
           <Grid item xs>
-            <Typography variant='body2'>Enim qui cillum labore veniam quis cillum reprehenderit.</Typography>
-            <Typography variant='body2'>Qui pariatur nisi tempor deserunt non anim minim deserunt anim.</Typography>
-            <Typography variant='body2'>Ea laborum enim ea incididunt ullamco laboris non et Lorem anim nulla ullamco eu.</Typography>
+            <LnTypo variant='body2'>Enim qui cillum labore veniam quis cillum reprehenderit.</LnTypo>
+            <LnTypo variant='body2'>Qui pariatur nisi tempor deserunt non anim minim deserunt anim.</LnTypo>
+            <LnTypo variant='body2'>Ea laborum enim ea incididunt ullamco laboris non et Lorem anim nulla ullamco eu.</LnTypo>
           </Grid>
 
         </Grid>
@@ -43,14 +44,14 @@ function Footer() {
           </Grid>
 
           <Grid item xs>
-            <Typography variant='subtitle2'>@2022 El Pinche Mito. Derechos reservados.</Typography>
+            <LnTypo variant='subtitle2'>@2022 El Pinche Mito. Derechos reservados.</LnTypo>
           </Grid>
         </Grid>
 
         {/*tercer item, firma*/}
         <Grid item xs={4}>
           <Grid item xs>
-            <Typography variant='h1'>FIRMA</Typography>
+            <LnTypo variant='h1'>FIRMA</LnTypo>
           </Grid>
         </Grid>
       </Grid>

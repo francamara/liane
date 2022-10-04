@@ -1,5 +1,6 @@
-import { Button, Typography } from '@mui/material'
+import { Button } from '@mui/material'
 import React from 'react'
+import LnTypo from '../LnTypo'
 
 
 function Header() {
@@ -11,12 +12,12 @@ function Header() {
 
         <div id='navbar'>
 
-          <Button id='myButton'> Inicio</Button>
-          <Button id='myButton' >¿Quien Soy?</Button>
-          <Button id='myButton'>¿Que es counselling?</Button>
-          <Button id='myButton'>¿Cómo puedo ayudarte?</Button>
-          <Button id='myButton'>El Pinche Mito</Button>
-          <Button id='myButton'>Contactamé</Button>
+          <Button id='myButton'> <LnTypo variant='button'>Inicio</LnTypo></Button>
+          <Button id='myButton' > <LnTypo variant='button'>¿Quién Soy?</LnTypo></Button>
+          <Button id='myButton'> <LnTypo variant='button'>¿Qué es counselling?</LnTypo></Button>
+          <Button id='myButton'> <LnTypo variant='button'>¿Cómo puedo ayudarte?</LnTypo></Button>
+          <Button id='myButton'> <LnTypo variant='button'>El Pinche Mito</LnTypo></Button>
+          <Button id='myButton'> <LnTypo variant='button'>Contáctame</LnTypo></Button>
 
 
         </div>
@@ -29,7 +30,7 @@ function Header() {
         <img id='bannerPodcastLogo' src='/Logo-para-banner-podcast.svg'>
           {/*TODO meter grid container direction row para organizar los elementos del banner*/}
         </img>
-        <Typography> Un podcast para no fundamentalistas</Typography>
+        <LnTypo> Un podcast para no fundamentalistas</LnTypo>
       </div>
     </div>
   )
