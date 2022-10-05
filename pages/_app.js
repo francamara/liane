@@ -7,6 +7,8 @@ import theme from '../config/theme'
 import createEmotionCache from '../config/createEmotionCache'
 import '../styles/header.css'
 import '../styles/hero.css'
+import '../styles/footer.css'
+import '../styles/mensaje.css'
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache()
