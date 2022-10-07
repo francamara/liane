@@ -4,13 +4,14 @@ import LnTypo from '../LnTypo'
 import Link from 'next/link'
 
 //TODO preguntar por orden de links, relevancia, SEO, etc
-const navLinkData = [{ item: 'Inicio', ref: '/' },
-{ item: '¿Qué es counselling?', ref: '#hero' },
-{ item: '¿Quién Soy?', ref: '#aboutme' },
-{ item: '¿Cómo puedo ayudarte?', ref: '#mensaje' },
-{ item: 'El Pinche Mito', ref: '#bannerPodcast' },
-{ item: 'Contáctame', ref: '#footer' }]
-
+const navLinkData = [
+  { item: 'Inicio', ref: '/' },
+  { item: '¿Qué es counselling?', ref: '#hero' },
+  { item: '¿Quién Soy?', ref: '#aboutme' },
+  { item: '¿Cómo puedo ayudarte?', ref: '#mensaje' },
+  { item: 'El Pinche Mito', ref: '#bannerPodcast' },
+  { item: 'Contáctame', ref: '#footer' }
+]
 
 function Header() {
   return (
@@ -20,8 +21,8 @@ function Header() {
 
 
         <div id='navbar'>
-          {navLinkData.map((navLink) => (
-            <Button id='myButton'> <Link href={navLink.ref} ><LnTypo variant='h6'>{navLink.item}</LnTypo></Link></Button>
+          {navLinkData.map((navLink, i) => (
+            <Button id='myButton' key={i}> <Link href={navLink.ref} ><LnTypo variant='h6'>{navLink.item}</LnTypo></Link></Button>
           ))}
         </div>
 
