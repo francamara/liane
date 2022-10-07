@@ -13,6 +13,7 @@ const navLinkData = [
   { item: 'Contáctame', ref: '#footer' }
 ]
 
+
 function Header() {
   return (
     //define altura del componente entero

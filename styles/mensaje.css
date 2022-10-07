@@ -1,3 +1,22 @@
 body {
   background-color: #fafafa;
 }
+
+#mensaje {
+  height: 70vh;
+  background-color: #453B3B;
+  display: flex;
+  align-items: center
+}
+
+.seText {
+  color: #fafafa;
+}
+
+
+@media screen and (max-width: 1000px) {
+  body {
+    background-color: #17f5;
+  }
+
+}

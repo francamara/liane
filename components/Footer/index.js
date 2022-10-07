@@ -8,7 +8,7 @@ import LnTypo from '../LnTypo'
 function Footer() {
   return (
     //TODO hacer que todo funque con grid y usar xs y sm para hacer todo responsive
-    <div id='footer' style={{ height: '30vh', backgroundColor: '#F4F0DB', display: 'flex', alignItems: 'center' }}>
+    <div id='footer' style={{ height: '30vh', backgroundColor: '#F4F0DB', display: 'flex', alignItems: 'center', justifyContent: 'space-evenly' }}>
 
       {/*contenedor del footer, con sus tres items, dos de los cuales tambien son contenedores*/}
       <Grid container direction='row' justifyContent='space-around'>
@@ -18,7 +18,7 @@ function Footer() {
         <Grid item xs={4} container direction='column' spacing={2} alignItems='center'>
 
           <Grid item xs>
-            <LnTypo variant='h2'>LOGO</LnTypo>
+            <img src='/Logo-Pinche-Mito-Negro.svg' alt='El Pinche Mito'></img>
           </Grid>
 
           <Grid item xs>
@@ -57,7 +57,7 @@ function Footer() {
         {/*tercer item, firma*/}
         <Grid item xs={4}>
           <Grid item xs>
-            <LnTypo variant='h1'>FIRMA</LnTypo>
+            <img id='footerSignature' src='/Logo-Liane.svg' alt='Liane Counselor'></img>
           </Grid>
         </Grid>
       </Grid>
