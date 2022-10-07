@@ -3,6 +3,14 @@ import React from 'react'
 import LnTypo from '../LnTypo'
 import Link from 'next/link'
 
+//TODO preguntar por orden de links, relevancia, SEO, etc
+const navLinkData = [{ item: 'Inicio', ref: '/' },
+{ item: '¿Qué es counselling?', ref: '#hero' },
+{ item: '¿Quién Soy?', ref: '#aboutme' },
+{ item: '¿Cómo puedo ayudarte?', ref: '#mensaje' },
+{ item: 'El Pinche Mito', ref: '#bannerPodcast' },
+{ item: 'Contáctame', ref: '#footer' }]
+
 
 function Header() {
   return (
@@ -12,13 +20,9 @@ function Header() {
 
 
         <div id='navbar'>
-          {/*TODO preguntar por orden de links, relevancia, SEO, etc*/}
-          <Button id='myButton'> <Link href='/'><LnTypo variant='h6'>Inicio</LnTypo></Link></Button>
-          <Button id='myButton'> <Link href='#hero'><LnTypo variant='h6'>¿Qué es counselling?</LnTypo></Link></Button>
-          <Button id='myButton'> <Link href='#aboutme'><LnTypo variant='h6'>¿Quién Soy?</LnTypo></Link></Button>
-          <Button id='myButton'> <Link href='#mensaje'><LnTypo variant='h6'>¿Cómo puedo ayudarte?</LnTypo></Link></Button>
-          <Button id='myButton'> <Link href='#bannerPodcast'><LnTypo variant='h6'>El Pinche Mito</LnTypo></Link></Button>
-          <Button id='myButton'> <Link href='#footer'><LnTypo variant='h6'>Contáctame</LnTypo></Link></Button>
+          {navLinkData.map((navLink) => (
+            <Button id='myButton'> <Link href={navLink.ref} ><LnTypo variant='h6'>{navLink.item}</LnTypo></Link></Button>
+          ))}
         </div>
 
         <img className='signatureLiane' src='/Logo-Liane.svg'></img>
