@@ -17,36 +17,44 @@ const navLinkData = [
 function Header() {
   return (
     //define altura del componente entero
-    <div style={{ height: '100vh' }}  >
+    <div>
       <div id='portada' >
 
 
         <div id='navbar'>
-          {navLinkData.map((navLink, i) => (
-            <Button id='myButton' key={i}> <Link href={navLink.ref} ><LnTypo variant='h6'>{navLink.item}</LnTypo></Link></Button>
-          ))}
+          <Grid container direction={{ xs: 'column', sm: 'row' }} justifyContent='center' alignItems='center' spacing={{ xs: '0', sm: '24' }}>
+            {navLinkData.map((navLink, i) => (
+              <Grid item sm='auto' key={i}>
+                <Button id='myButton'>
+                  <Link href={navLink.ref} >
+                    <LnTypo variant='h6'>{navLink.item}</LnTypo>
+                  </Link>
+                </Button>
+              </Grid>
+            ))}
+          </Grid>
         </div>
+        <div id='signatureCont'>
 
-        <img className='signatureLiane' src='/Logo-Liane.svg'></img>
+          <img className='signatureLiane' src='/Logo-Liane.svg' />
+        </div>
 
       </div>
       <div id='bannerPodcast'>
-        <Grid container direction='row' justifyContent='center' alignItems='center'>
-          <Grid item xs={2} container justifyContent='flex-end'>
+        <Grid container direction={{ xs: 'column', sm: 'row' }} justifyContent='center' alignItems='center'>
+          <Grid item sm='auto' container justifyContent='center'>
             <img id='bannerPodcastPicture' src='/bannerPodcastPicture.svg' alt='fotoparaelpodcast'></img>
           </Grid>
-          <Grid item xs={3} container alignItems='stretch'>
+          <Grid item sm='auto' container justifyContent='center'>
             <img id='bannerPodcastLogo' src='/Logo-para-banner-podcast.svg' />
           </Grid>
-          <Grid item xs={2} container justifyContent='flex-start'>
-            <Grid item xs>
-              <LnTypo id='bannerSloganPodcast' variant='h4'> &quot;Un podcast para no fundamentalistas&quot; </LnTypo>
-            </Grid>
+          <Grid item sm='auto' container justifyContent='center' alignItems='center'>
+            <LnTypo id='bannerSloganPodcast' variant='h4'> &quot;Un podcast para no fundamentalistas&quot; </LnTypo>
           </Grid>
         </Grid>
 
       </div>
-    </div>
+    </div >
   )
 }
 

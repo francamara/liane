@@ -1,18 +1,18 @@
 #portada {
-  height: 80vh;
   background-image: url('https://img.freepik.com/free-photo/paper-texture-colorful-abstract-background_53876-98401.jpg?w=1800&t=st=1664921613~exp=1664922213~hmac=2f3fe6e0eb30d35c388524147812ee2269d8d0ec449b6f11a8a5e211602e65f4');
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 80vh;
+}
+
+#signatureCont {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .signatureLiane {
-  display: flex;
-  align-self: center;
-  justify-content: center;
-  width: 300px;
-  height: auto;
-  position: absolute;
-  bottom: 20vh;
+  width: auto;
+  height: 30vh;
 }
 
 #bannerPodcast {
@@ -24,13 +24,9 @@
 }
 
 #bannerPodcastLogo {
-  width: 40vw;
-
-  min-height: 0;
-  max-height: 20vh;
+  height: 20vh;
+  width: auto;
 }
-
-
 
 #bannerPodcastPicture {
   height: 20vh;
@@ -38,7 +34,7 @@
 }
 
 #bannerSloganPodcast {
-  color: white;
+  color: #fafafa;
 }
 
 #navbar {
@@ -51,7 +47,7 @@
 #myButton {
   /* font-family: 'Courier New', Courier, monospace;
   background: transparent; */
-  color: rgb(29, 29, 29);
+  color: #1d1d1d;
   border-radius: 0px;
   /* font-weight: bold;
   text-decoration: none; */
@@ -61,10 +57,22 @@
 
 #myButton:hover {
   background: #ffe7a3;
-  color: rgb(29, 29, 29);
+  color: #1d1d1d;
 }
 
 #myButton:active {
-  background: white;
-  color: rgb(29, 29, 29);
+  background: #fafafa;
+  color: #1d1d1d;
+}
+
+@media screen and (max-width: 600px) {
+  #bannerPodcastLogo {
+    height: auto;
+    width: 100vw;
+  }
+
+  #bannerPodcastPicture {
+    height: 40vh;
+    width: auto;
+  }
 }

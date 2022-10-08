@@ -3,7 +3,6 @@ body {
 }
 
 #mensaje {
-  height: 70vh;
   background-color: #453B3B;
   display: flex;
   align-items: center

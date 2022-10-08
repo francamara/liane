@@ -7,31 +7,30 @@ import LnTypo from '../LnTypo'
 
 function Footer() {
   return (
-    //TODO hacer que todo funque con grid y usar xs y sm para hacer todo responsive
-    <div id='footer' style={{ height: '30vh', backgroundColor: '#F4F0DB', display: 'flex', alignItems: 'center', justifyContent: 'space-evenly' }}>
+    <div id='footer' style={{ backgroundColor: '#F4F0DB', display: 'flex', alignItems: 'center', justifyContent: 'space-evenly' }}>
 
       {/*contenedor del footer, con sus tres items, dos de los cuales tambien son contenedores*/}
-      <Grid container direction='row' justifyContent='space-around'>
+      <Grid container direction='row' justifyContent='space-around' alignItems='center'>
 
 
-        {/*el primer item, logo y tres lineas de texto que todavia no tenemos TODO*/}
-        <Grid item xs={4} container direction='column' spacing={2} alignItems='center'>
+        {/*TODO el primer item, logo y tres lineas de texto que todavia no tenemos*/}
+        <Grid item xs={10} sm={3} container direction='column' alignItems='center'>
 
           <Grid item xs>
             <img src='/Logo-Pinche-Mito-Negro.svg' alt='El Pinche Mito'></img>
           </Grid>
 
           <Grid item xs>
-            <LnTypo variant='body2'>Enim qui cillum labore veniam quis cillum reprehenderit.</LnTypo>
-            <LnTypo variant='body2'>Qui pariatur nisi tempor deserunt non anim minim deserunt anim.</LnTypo>
-            <LnTypo variant='body2'>Ea laborum enim ea incididunt ullamco laboris non et Lorem anim nulla ullamco eu.</LnTypo>
+            <LnTypo variant='body2'>Enim qui cillum labore veniam quis cillum reprehenderit. Qui
+              pariatur nisi tempor deserunt non anim minim deserunt anim. Ea laborum enim ea incididunt
+              ullamco laboris non et Lorem anim nulla ullamco eu.</LnTypo>
           </Grid>
 
         </Grid>
 
 
         {/*segundo item, links de footer internos, redes sociales, declaracion de derechos*/}
-        <Grid item xs={4} container direction='column' spacing={2} alignItems='center'>
+        <Grid item xs={10} sm={3} container direction='column' spacing={2} alignItems='center'>
 
           <Grid item xs>
             <Link href="/">
@@ -55,7 +54,7 @@ function Footer() {
         </Grid>
 
         {/*tercer item, firma*/}
-        <Grid item xs={4}>
+        <Grid item xs={10} sm={3} container justifyContent='center'>
           <Grid item xs>
             <img id='footerSignature' src='/Logo-Liane.svg' alt='Liane Counselor'></img>
           </Grid>

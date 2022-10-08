@@ -3,7 +3,7 @@ import React from 'react'
 
 function LnTypo(props) {
   return (
-    <Typography {...props}>
+    <Typography {...props} align='justify'>
       {props.children}
     </Typography>
   )

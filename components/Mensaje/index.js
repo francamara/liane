@@ -7,18 +7,18 @@ function Mensaje() {
     //TODO hacer que el mensaje y posiblemente la foto se levanten dinamicamente, futuramente modificable por superuser
     <div id='mensaje'>
       {/*contenedor del Mensaje*/}
-      <Grid container justifyContent='center' spacing={8} style={{ maxHeight: '100 %' }}>
+      <Grid container justifyContent='center' spacing={6} marginY={4}>
 
         {/*foto asociada a mensaje*/}
-        <Grid item xs={3} container justifyContent='flex-end'>
+        <Grid item xs={10} sm={3} container justifyContent='center' alignItems='center'>
           <LnTypo variant='h1'>
             FOTO
           </LnTypo>
         </Grid>
 
         {/*texto mensaje*/}
-        <Grid item xs={5}>
-          <LnTypo variant='body1' className='seText' align='justify' mb={4}>
+        <Grid item xs={10} sm={6}>
+          <LnTypo variant='body1' className='seText' mb={4}>
             Elit culpa sit ea nisi aliqua proident. Occaecat dolor laborum incididunt eu nostrud
             deserunt irure occaecat magna exercitation duis.Ullamco duis consectetur voluptate
             sunt deserunt nisi nostrud consectetur dolor.Irure irure ut officia dolore id pariatur
@@ -31,7 +31,7 @@ function Mensaje() {
             tempor. Occaecat do duis elit aliquip nulla cupidatat nisi aliquip sunt.
           </LnTypo>
 
-          <LnTypo variant='body1' className='seText' align='justify' mb={4}>
+          <LnTypo variant='body1' className='seText' mb={4}>
             Elit culpa sit ea nisi aliqua proident. Occaecat dolor laborum incididunt eu nostrud
             deserunt irure occaecat magna exercitation duis.Ullamco duis consectetur voluptate
             sunt deserunt nisi nostrud consectetur dolor.Irure irure ut officia dolore id pariatur
@@ -44,7 +44,6 @@ function Mensaje() {
             tempor. Occaecat do duis elit aliquip nulla cupidatat nisi aliquip sunt.
           </LnTypo>
         </Grid>
-
       </Grid>
     </div >
   )
