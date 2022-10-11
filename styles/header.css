@@ -1,5 +1,5 @@
 #portada {
-  background-image: url('https://img.freepik.com/free-photo/paper-texture-colorful-abstract-background_53876-98401.jpg?w=1800&t=st=1664921613~exp=1664922213~hmac=2f3fe6e0eb30d35c388524147812ee2269d8d0ec449b6f11a8a5e211602e65f4');
+  background-image: url(../public/fondo-pagina-vdiego.svg);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 80vh;
@@ -8,11 +8,13 @@
 #signatureCont {
   display: flex;
   justify-content: flex-start;
+  align-items: flex-end;
+  height: 80vh;
 }
 
 .signatureLiane {
   width: auto;
-  height: 30vh;
+  height: 40vh;
 }
 
 #bannerPodcast {

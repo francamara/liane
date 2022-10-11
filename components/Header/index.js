@@ -49,7 +49,7 @@ function Header() {
             <img id='bannerPodcastLogo' src='/Logo-para-banner-podcast.svg' />
           </Grid>
           <Grid item sm='auto' container justifyContent='center' alignItems='center'>
-            <LnTypo id='bannerSloganPodcast' variant='h4'> &quot;Un podcast para no fundamentalistas&quot; </LnTypo>
+            <LnTypo id='bannerSloganPodcast'> &quot;Un podcast para no fundamentalistas&quot; </LnTypo>
           </Grid>
         </Grid>
 
