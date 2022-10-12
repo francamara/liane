@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import InstagramIcon from '@mui/icons-material/Instagram'
+import YouTubeIcon from '@mui/icons-material/YouTube'
 import LnTypo from '../LnTypo'
 
 function Footer() {
@@ -45,7 +46,10 @@ function Footer() {
           </Grid>
 
           <Grid item xs>
-            <LinkedInIcon></LinkedInIcon> <InstagramIcon></InstagramIcon>
+            <LinkedInIcon />
+            <InstagramIcon />
+            <YouTubeIcon />
+            <img src='/spotify-mono-icon.svg' height='24px' />
           </Grid>
 
           <Grid item xs>
