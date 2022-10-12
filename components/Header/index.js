@@ -7,7 +7,7 @@ import Link from 'next/link'
 const navLinkData = [
   { item: 'Inicio', ref: '/' },
   { item: '¿Qué es counselling?', ref: '#hero' },
-  { item: '¿Quién Soy?', ref: '#aboutme' },
+  { item: '¿Quién soy?', ref: '#aboutme' },
   { item: '¿Cómo puedo ayudarte?', ref: '#mensaje' },
   { item: 'El Pinche Mito', ref: '#bannerPodcast' },
   { item: 'Contáctame', ref: '#footer' }

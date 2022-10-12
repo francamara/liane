@@ -28,6 +28,9 @@
 #bannerPodcastLogo {
   height: 20vh;
   width: auto;
+  gap: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 #bannerPodcastPicture {
