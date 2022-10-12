@@ -37,6 +37,7 @@
 
 #bannerSloganPodcast {
   color: #fafafa;
+  font-family: 'TommySoft';
 }
 
 #navbar {
@@ -76,5 +77,10 @@
   #bannerPodcastPicture {
     height: 40vh;
     width: auto;
+  }
+
+  .signatureLiane {
+    width: auto;
+    height: 80vw;
   }
 }

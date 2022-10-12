@@ -7,13 +7,13 @@ import LnTypo from '../LnTypo'
 
 function Footer() {
   return (
-    <div id='footer' style={{ backgroundColor: '#F4F0DB', display: 'flex', alignItems: 'center', justifyContent: 'space-evenly' }}>
+    <div id='footer'>
 
       {/*contenedor del footer, con sus tres items, dos de los cuales tambien son contenedores*/}
-      <Grid container direction='row' justifyContent='space-around' alignItems='center'>
+      <Grid container direction='row' justifyContent='center' alignItems='center'>
 
 
-        {/*TODO el primer item, logo y tres lineas de texto que todavia no tenemos*/}
+        {/*TODO agregar tres lineas de texto que todavia no tenemos*/}
         <Grid item xs={10} sm={3} container direction='column' alignItems='center'>
 
           <Grid item xs>
@@ -54,13 +54,13 @@ function Footer() {
         </Grid>
 
         {/*tercer item, firma*/}
-        <Grid item xs={10} sm={3} container justifyContent='center'>
+        <Grid item xs={10} sm={3} container>
           <Grid item xs>
-            <img id='footerSignature' src='/Logo-Liane.svg' alt='Liane Counselor'></img>
+            <img id='footerSignature' src='/Logo-Liane.svg' alt='Liane Counselor' />
           </Grid>
         </Grid>
       </Grid>
-    </div>
+    </div >
   )
 }
 

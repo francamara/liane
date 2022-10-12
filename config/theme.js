@@ -14,10 +14,10 @@ const theme = createTheme({
     },
   },
   typography: {
-    //fontFamily: 'Caecilia',
+    fontFamily: 'Caecilia, TommySoft',
     h1: {
-      color: '#19857b'
-    }
+      color: '#fafafa'
+    },
   }
 })
 export default theme

@@ -11,7 +11,7 @@ function Mensaje() {
 
         {/*foto asociada a mensaje*/}
         <Grid item xs={10} sm={3} container justifyContent='center' alignItems='center'>
-          <LnTypo variant='h1'>
+          <LnTypo variant='h1' sx={{ fontFamily: 'TommySoft' }}>
             FOTO
           </LnTypo>
         </Grid>

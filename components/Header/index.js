@@ -16,13 +16,13 @@ const navLinkData = [
 
 function Header() {
   return (
-    //define altura del componente entero
+    //este div porque solo se devuelve un elemento padre
     <div>
+      {/* div portada dibujito y nav */}
       <div id='portada' >
-
-
         <div id='navbar'>
           <Grid container direction={{ xs: 'column', sm: 'row' }} justifyContent='center' alignItems='center' spacing={{ xs: '0', sm: '24' }}>
+            {/*Se mapea el array con las etiquetas y rutas del navbar para generar cada link*/}
             {navLinkData.map((navLink, i) => (
               <Grid item sm='auto' key={i}>
                 <Button id='myButton'>
@@ -34,12 +34,13 @@ function Header() {
             ))}
           </Grid>
         </div>
+        {/* contenedor de firma */}
         <div id='signatureCont'>
-
           <img className='signatureLiane' src='/Logo-Liane.svg' />
         </div>
 
       </div>
+      {/*TODO agregar link al podcast*/}
       <div id='bannerPodcast'>
         <Grid container direction={{ xs: 'column', sm: 'row' }} justifyContent='center' alignItems='center'>
           <Grid item sm='auto' container justifyContent='center'>
@@ -49,7 +50,7 @@ function Header() {
             <img id='bannerPodcastLogo' src='/Logo-para-banner-podcast.svg' />
           </Grid>
           <Grid item sm='auto' container justifyContent='center' alignItems='center'>
-            <LnTypo id='bannerSloganPodcast'> &quot;Un podcast para no fundamentalistas&quot; </LnTypo>
+            <LnTypo id='bannerSloganPodcast'> &quot;Un podcast para no fundamentalistas.&quot; </LnTypo>
           </Grid>
         </Grid>
 

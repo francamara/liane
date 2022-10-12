@@ -8,20 +8,19 @@ import LnTypo from '../LnTypo'
 function Hero() {
   const isXs = useMediaQuery('(max-width:600px)')
   return (
-    //id usado para hashlinkear, se fija tamaño aca pero no debería,
-    //hay que separar el hero en dos componentes
+    //id usado para hashlinkear
     <div className='aboutMeBackground'>
-      <div id='hero' style={{ display: 'flex', alignItems: 'center' }}>
+      <div id='hero'>
         <Grid container direction='column'>
           <Grid item container spacing={4} id='upperSection' direction='row' justifyContent='center' alignItems='center' marginY={4}>
             <Grid item xs={10} sm={3}>
-              <LnTypo variant='body1'>  elit incididunt et in in enim exercitation et dolore proident cillum. Incididunt elit sit magna non culpa ea. Anim fugiat velit tempor incididunt. Lorem eiusmod consequat eiusmod minim dolore culpa excepteur.</LnTypo>
+              <LnTypo variant='body1'>  Irure mollit id dolore ex duis. Pariatur nisi ad duis qui irure et ad incididunt occaecat incididunt ex et elit. Laborum sint pariatur mollit do laborum velit id est.</LnTypo>
             </Grid>
             <Grid item xs={10} sm={3}>
-              <LnTypo variant='body1'>  elit incididunt et in in enim exercitation et dolore proident cillum. Incididunt elit sit magna non culpa ea. Anim fugiat velit tempor incididunt. Lorem eiusmod consequat eiusmod minim dolore culpa excepteur.</LnTypo>
+              <LnTypo variant='body1'>  Id amet culpa ipsum consequat officia exercitation incididunt enim eu pariatur minim incididunt do commodo. Do aliquip culpa officia mollit esse amet minim.</LnTypo>
             </Grid>
             <Grid item xs={10} sm={3}>
-              <LnTypo variant='body1'>  elit incididunt et in in enim exercitation et dolore proident cillum. Incididunt elit sit magna non culpa ea. Anim fugiat velit tempor incididunt. Lorem eiusmod consequat eiusmod minim dolore culpa excepteur.</LnTypo>
+              <LnTypo variant='body1'>  Sint dolor aliqua magna ut excepteur laboris aliqua deserunt nisi cupidatat tempor. Culpa dolor occaecat irure occaecat. Ex aliquip minim elit cillum aliquip.</LnTypo>
             </Grid>
 
           </Grid>

@@ -15,7 +15,7 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -24,11 +24,20 @@ a {
     color: white;
     background: black;
   }
+} */
+
+@font-face {
+  font-family: 'Caecilia';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../public/fonts/Caecilia.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: Caecilia;
-  src: url("/fonts/Caecilia.woff2");
-  format: ("woff2");
+  font-family: 'TommySoft';
+  font-style: normal;
+  font-weight: 400;
   font-display: swap;
+  src: url("../public/fonts/TommySoft.woff2") format("woff2");
 }

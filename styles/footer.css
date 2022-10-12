@@ -1,10 +1,16 @@
+#footer {
+  background-color: #F4F0DB;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 #footerSignature {
   display: flex;
   align-self: flex-end;
   justify-content: flex-end;
   width: auto;
   height: 25vh;
-
 }
 
 #footerLogoPodcast {
@@ -13,4 +19,16 @@
   justify-content: flex-start;
   height: 20vh;
   width: auto;
+}
+
+@media screen and (max-width: 600px) {
+  #footerSignature {
+    height: auto;
+    width: 90vw;
+  }
+
+  #footerLogoPodcast {
+    height: auto;
+    width: 90vw;
+  }
 }
