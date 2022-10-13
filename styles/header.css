@@ -17,30 +17,7 @@
   height: 40vh;
 }
 
-#bannerPodcast {
-  display: flex;
-  background: #255fca;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-}
 
-#bannerPodcastLogo {
-  height: 20vh;
-  width: auto;
-  gap: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-#bannerPodcastPicture {
-  height: 20vh;
-  width: auto;
-}
-
-#bannerSloganPodcast {
-  color: #fafafa;
-}
 
 #navbar {
   display: flex;
@@ -68,21 +45,4 @@
 #myButton:active {
   background: #fafafa;
   color: #1d1d1d;
-}
-
-@media screen and (max-width: 600px) {
-  #bannerPodcastLogo {
-    height: auto;
-    width: 100vw;
-  }
-
-  #bannerPodcastPicture {
-    height: 40vh;
-    width: auto;
-  }
-
-  .signatureLiane {
-    width: auto;
-    height: 80vw;
-  }
 }
