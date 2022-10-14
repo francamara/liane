@@ -5,40 +5,36 @@ services:
     container_name: mongo1
     image: mongo:latest
     volumes:
-      - ~/mongors/data1:/data/db
+      - ~/mongo/data1:/data/db
       - ./rs-init.sh:/scripts/rs-init.sh
     networks:
-      - mongors-network
+      - mongo-network
     ports:
-      - 127.0.10.1:27017:27017
-    links:
-      - mongo2
-      - mongo3
+      - 27021:27017
     restart: always
-    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "rs0" ]
+    command: mongod --bind_ip_all --replSet mongo-set
   mongo2:
     container_name: mongo2
     image: mongo:latest
     volumes:
-      - ~/mongors/data2:/data/db
+      - ~/mongo/data2:/data/db
     networks:
-      - mongors-network
+      - mongo-network
     ports:
-      - 127.0.10.2:27017:27017
+      - 27022:27017
     restart: always
-    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "rs0" ]
+    command: mongod --bind_ip_all --replSet mongo-set
   mongo3:
     container_name: mongo3
     image: mongo:latest
     volumes:
-      - ~/mongors/data3:/data/db
+      - ~/mongo/data3:/data/db
     networks:
-      - mongors-network
+      - mongo-network
     ports:
-      - 127.0.10.3:27017:27017
+      - 27023:27017
     restart: always
-    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "rs0" ]
+    command: mongod --bind_ip_all --replSet mongo-set
 
 networks:
-  mongors-network:
-    driver: bridge
+  mongo-network:
