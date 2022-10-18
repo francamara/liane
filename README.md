@@ -46,11 +46,16 @@ cd db
 
 To check everything is up and running you can use
 ```
-docker exec -it mongo1 mongo rs.status()
+docker exec -it mongo1 mongo
 ```
-or if you're using windows (r word alert) use
+or if you're using windows
 ```
-docker exec -it mongo1 mongosh rs.status()
+docker exec -it mongo1 mongosh
+```
+
+then run
+```
+rs.status()
 ```
 
 
