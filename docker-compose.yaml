@@ -10,7 +10,7 @@ services:
     networks:
       - mongo-network
     ports:
-      - 27021:27017
+      - ${DB_1_PORT}:27017
     restart: always
     command: mongod --bind_ip_all --replSet mongo-set
   mongo2:
@@ -21,7 +21,7 @@ services:
     networks:
       - mongo-network
     ports:
-      - 27022:27017
+      - ${DB_2_PORT}:27017
     restart: always
     command: mongod --bind_ip_all --replSet mongo-set
   mongo3:
@@ -32,7 +32,7 @@ services:
     networks:
       - mongo-network
     ports:
-      - 27023:27017
+      - ${DB_3_PORT}:27017
     restart: always
     command: mongod --bind_ip_all --replSet mongo-set
 

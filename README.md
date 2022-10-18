@@ -34,14 +34,14 @@ and
 docker-compose --version
 ```
 
-Then navigate to the db directory, where the yaml file resides
-```
-cd db
-```
-
 To start the docker network which houses the three replica set containers, simply run
 ```
 docker-compose up -d
+```
+
+Then navigate to the db directory
+```
+cd db
 ```
 
 To check everything is up and running you can use

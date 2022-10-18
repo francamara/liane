@@ -6,15 +6,15 @@ var config = {
     "members": [
         {
             "_id": 0,
-            "host": "mongo1:27017"
+;            "host": "mongo1:"${DB_1_PORT}""
         },
         {
             "_id": 1,
-            "host": "mongo2:27017"
+            "host": "mongo2:"${DB_2_PORT}""
         },
         {
             "_id": 2,
-            "host": "mongo3:27017"
+            "host": "mongo3:"${DB_3_PORT}""
         }
     ]
 };
