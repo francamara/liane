@@ -1,0 +1,40 @@
+version: '3.9'
+
+services:
+  mongo1:
+    container_name: mongo1
+    image: mongo:latest
+    volumes:
+      - ~/mongo/data1:/data/db
+      - ./rs-init.sh:/scripts/rs-init.sh
+    networks:
+      - mongo-network
+    ports:
+      - ${DB_1_PORT}:27017
+    restart: always
+    command: mongod --bind_ip_all --replSet mongo-set
+  mongo2:
+    container_name: mongo2
+    image: mongo:latest
+    volumes:
+      - ~/mongo/data2:/data/db
+    networks:
+      - mongo-network
+    ports:
+      - ${DB_2_PORT}:27017
+    restart: always
+    command: mongod --bind_ip_all --replSet mongo-set
+  mongo3:
+    container_name: mongo3
+    image: mongo:latest
+    volumes:
+      - ~/mongo/data3:/data/db
+    networks:
+      - mongo-network
+    ports:
+      - ${DB_3_PORT}:27017
+    restart: always
+    command: mongod --bind_ip_all --replSet mongo-set
+
+networks:
+  mongo-network:

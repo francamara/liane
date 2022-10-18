@@ -14,6 +14,7 @@
     "@emotion/styled": "^11.10.4",
     "@mui/icons-material": "^5.10.6",
     "@mui/material": "^5.10.7",
+    "@prisma/client": "^4.4.0",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -24,6 +25,7 @@
     "@commitlint/config-conventional": "^11.0.0",
     "eslint": "8.24.0",
     "eslint-config-next": "12.3.1",
-    "husky": "^8.0.1"
+    "husky": "^8.0.1",
+    "prisma": "^4.4.0"
   }
 }
