@@ -2,6 +2,8 @@ import { Button, Grid } from '@mui/material'
 import React from 'react'
 import LnTypo from '../LnTypo'
 import Link from 'next/link'
+import ImageSlider from '../../carrousel/carrousel'
+import carrouselData from '../../carrousel/carrousel'
 
 //TODO preguntar por orden de links, relevancia, SEO, etc
 const navLinkData = [
@@ -33,11 +35,16 @@ function Header() {
               </Grid>
             ))}
           </Grid>
+
+        </div>
+        <div id='carrouselContainer'>
+          <ImageSlider slides={carrouselData} />
         </div>
         {/* contenedor de firma */}
         <div id='signatureCont'>
           <img className='signatureLiane' src='/Logo-Liane.svg' />
         </div>
+
 
       </div>
     </div >
