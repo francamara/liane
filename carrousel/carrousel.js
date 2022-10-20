@@ -1,56 +1,31 @@
-import React, { useState } from 'react'
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 
-export const carrouselData = [
-  {
-    image: '/BASE-LIANE-1.jpg'
-  },
-  {
-    image: '/BASE-LIANE-2.jpg'
-  },
-  {
-    image: '/BASE-LIANE-3.jpg'
-  }
+import React from 'react'
+import Carousel from 'react-material-ui-carousel'
+import { Paper } from '@mui/material'
+
+
+const images = [
+  <img key={1} src='/BASE-LIANE-1.jpg' />,
+  <img key={2} src='/BASE-LIANE-2.jpg' />
 ]
 
-const ImageSlider = ({ slides }) => {
-  const [current, setCurrent] = useState(0)
-  const length = slides.length
-
-
-  const nextSlide = () => {
-    setCurrent(current + 1)
-  }
-
-  const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1)
-  }
-
-
-
-
+function ImageSlider() {
 
   return (
-    <div className="slider">
-      <ArrowBackIosIcon className="leftArrow" onClick={prevSlide} />
-      <ArrowForwardIosIcon className="rightArrow" onClick={nextSlide} />
+    <Carousel className='sliderImage'>
+      {
+        images.map((item, i) => <Item key={i} item={item} />)
+      }
+    </Carousel>
+  )
+}
 
-      {carrouselData.map((slide, george) => {
-        return (
-          <div
-            className={george === current ? 'slide active' : 'slide'} key={george}>
-            {george === current && (<img src={slide.image} alt='imagenes' className="sliderImage" />
-            )}
+function Item(props) {
+  return (
+    <Paper >
+      <div>{props.item} </div>
+    </Paper>
 
-
-          </div>
-
-        )
-
-
-      })}
-    </div>
   )
 }
 

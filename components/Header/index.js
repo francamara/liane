@@ -3,7 +3,6 @@ import React from 'react'
 import LnTypo from '../LnTypo'
 import Link from 'next/link'
 import ImageSlider from '../../carrousel/carrousel'
-import carrouselData from '../../carrousel/carrousel'
 
 //TODO preguntar por orden de links, relevancia, SEO, etc
 const navLinkData = [
@@ -38,7 +37,7 @@ function Header() {
 
         </div>
         <div id='carrouselContainer'>
-          <ImageSlider slides={carrouselData} />
+          <ImageSlider />
         </div>
         {/* contenedor de firma */}
         <div id='signatureCont'>
