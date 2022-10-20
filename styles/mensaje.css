@@ -11,11 +11,3 @@ body {
 .seText {
   color: #fafafa;
 }
-
-
-@media screen and (max-width: 1000px) {
-  body {
-    background-color: #17f5;
-  }
-
-}

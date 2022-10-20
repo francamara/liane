@@ -14,7 +14,19 @@
 }
 
 .sliderImage {
-  width: 90vw;
-  height: 60vh;
-  border-radius: 10px;
+  width: 100vw;
+  height: 80vh;
+
+
+}
+
+#imagesFromCarrousel {
+  max-width: 100%;
+  max-height: fit-content;
+
+}
+
+.css-ktslay-MuiButtonBase-root-MuiIconButton-root {
+  opacity: 10;
+  background-color: #05e8b7;
 }
