@@ -22,38 +22,6 @@ To start development mode run the following command
 npm run dev
 ```
 
-## How to start the db
-
-First of all, make sure you have docker and docker-compose installed
-
-```
-docker --version
-```
-and
-```
-docker-compose --version
-```
-
-To start the docker network which houses the three replica set containers, simply run
-```
-docker-compose up -d
-```
-
-Then navigate to the db directory
-```
-cd db
-```
-
-To check everything is up and running you can use
-```
-docker exec -it mongo1 mongo rs.status()
-```
-or if you're using windows (r word alert) use
-```
-docker exec -it mongo1 mongosh rs.status()
-```
-
-
 ## Commit Rules
 You want all the commit messages to be like this:
 

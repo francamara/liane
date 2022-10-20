@@ -12,6 +12,7 @@ import '../styles/bannerpodcast.css'
 import '../styles/hero.css'
 import '../styles/footer.css'
 import '../styles/mensaje.css'
+import { SessionProvider } from 'next-auth/react'
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache()
@@ -28,7 +29,11 @@ export default function MyApp(props) {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        <Component {...pageProps} />
+        <SessionProvider>
+
+          <Component {...pageProps} />
+
+        </SessionProvider>
       </ThemeProvider>
     </CacheProvider>
   )
