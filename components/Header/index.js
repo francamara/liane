@@ -2,7 +2,7 @@ import { Button, Grid } from '@mui/material'
 import React from 'react'
 import LnTypo from '../LnTypo'
 import Link from 'next/link'
-import ImageSlider from '../../carrousel/carrousel'
+import ImageSlider from '../../components/Carrrousel'
 
 //TODO preguntar por orden de links, relevancia, SEO, etc
 const navLinkData = [
