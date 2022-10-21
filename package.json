@@ -10,11 +10,15 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-react": "^5.0.2",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@mui/icons-material": "^5.10.6",
     "@mui/material": "^5.10.7",
     "@prisma/client": "^4.4.0",
+    "ckeditor": "^4.12.1",
+    "ckeditor5-custom-build": "file:ckeditor5",
+    "file": "^0.2.2",
     "next": "12.3.1",
     "next-auth": "^4.14.0",
     "react": "18.2.0",
