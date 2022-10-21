@@ -5,12 +5,16 @@ export default async (req, res) => {
   const postId = JSON.parse(req.body.id)
 
   if (req.method !== 'GET') {
-    return res.status(405).json({ message: 'Method not allowed' })
+    return res.status(405).json({ success: false, message: 'Method not allowed' })
+  }
+
+  if (!postId) {
+    return res.status(404).json({ success: false, message: 'Not found' })
   }
 
   const post = await prisma.post.findUnique({
     where: {
-      id: postId || -1,
+      id: postId,
     },
     include: {
       author: {
@@ -19,5 +23,9 @@ export default async (req, res) => {
     },
   })
 
-  res.status(200).json(post)
+  if (!post) {
+    return res.status(404).json({ success: false, message: 'Not found' })
+  }
+
+  res.status(200).json({ success: true, post })
 }

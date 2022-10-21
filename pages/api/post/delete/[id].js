@@ -6,16 +6,24 @@ export default async function handle(req, res) {
   const postId = JSON.parse(req.body.id)
   const session = await getSession({ req })
 
-  if (session) {
-    if (req.method !== 'DELETE') {
-      return res.status(405).json({ message: 'Method not allowed' })
-    }
-
-    const post = await prisma.post.delete({
-      where: { id: postId },
-    })
-    res.status(204).json(post)
-  } else {
-    res.status(401).send({ message: 'Unauthorized' })
+  if (!session) {
+    return res.status(401).send({ success: false, message: 'Unauthorized' })
   }
+  if (req.method !== 'DELETE') {
+    return res.status(405).json({ success: false, message: 'Method not allowed' })
+  }
+  if (!postId) {
+    return res.status(404).json({ success: false, message: 'Not found' })
+  }
+
+  const post = await prisma.post.delete({
+    where: { id: postId },
+  })
+
+  if (!post) {
+    return res.status(404).json({ success: false, message: 'Not found' })
+  }
+
+  res.status(204).json({ success: true })
 }
+

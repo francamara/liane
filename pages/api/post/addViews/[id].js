@@ -5,7 +5,11 @@ export default async function handle(req, res) {
   const postId = JSON.parse(req.body.id)
 
   if (req.method !== 'PUT') {
-    return res.status(405).json({ message: 'Method not allowed' })
+    return res.status(405).json({ success: false, message: 'Method not allowed' })
+  }
+
+  if (!postId) {
+    return res.status(404).json({ success: false, message: 'Not found' })
   }
 
   const post = await prisma.post.update({
@@ -16,6 +20,11 @@ export default async function handle(req, res) {
       },
     },
   })
-  res.status(200).json(post)
+
+  if (!post) {
+    return res.status(404).json({ success: false, message: 'Not found' })
+  }
+
+  res.status(200).json({ success: true, post })
 }
 
