@@ -1,4 +1,3 @@
-
 import { Grid } from '@mui/material'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import React from 'react'
