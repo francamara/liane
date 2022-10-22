@@ -26,6 +26,12 @@
 
 }
 
+.css-1ps6pg7-MuiPaper-root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .css-ktslay-MuiButtonBase-root-MuiIconButton-root {
   opacity: 10;
   background-color: #05e8b7;
