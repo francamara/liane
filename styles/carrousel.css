@@ -5,6 +5,7 @@
 }
 
 
+
 .slider {
   position: relative;
   height: 60vh;
@@ -16,13 +17,12 @@
 .sliderImage {
   width: 100vw;
   height: 80vh;
-
-
 }
 
 #imagesFromCarrousel {
-  max-width: 100%;
-  max-height: fit-content;
+  max-width: 100vw;
+  max-height: 80vh;
+
 
 }
 

@@ -5,8 +5,8 @@ import { Paper } from '@mui/material'
 
 
 const images = [
-  <img key={1} src='/BASE-LIANE-1.svg' id='imagesFromCarrousel' />,
-  <img key={2} src='/BASE-LIANE-2.svg' id='imagesFromCarrousel' />,
+  <img key={1} src='/BASE-LIANE-1.jpg' id='imagesFromCarrousel' />,
+  <img key={2} src='/BASE-LIANE-2.jpg' id='imagesFromCarrousel' />,
   <img key={3} src='/BASE-LIANE-3.jpg' id='imagesFromCarrousel' />,
   <img key={4} src='/BASE-LIANE-4.jpg' id='imagesFromCarrousel' />
 ]
