@@ -9,7 +9,7 @@ export default async function handle(req, res) {
   }
 
   if (!postId) {
-    return res.status(404).json({ success: false, message: 'Not found' })
+    return res.status(400).json({ success: false, message: 'Need a post id to find post' })
   }
 
   const post = await prisma.post.update({
@@ -22,7 +22,7 @@ export default async function handle(req, res) {
   })
 
   if (!post) {
-    return res.status(404).json({ success: false, message: 'Not found' })
+    return res.status(404).json({ success: false, message: 'Post not found' })
   }
 
   res.status(200).json({ success: true, post })

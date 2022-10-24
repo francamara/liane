@@ -3,7 +3,6 @@ import prisma from '../../../../lib/prisma'
 
 // GET /api/user/getByEmail, returns all posts
 export default async function handle(req, res) {
-  const postId = JSON.parse(req.body.id)
   const session = await getSession({ req })
 
   if (!session) {
@@ -12,14 +11,11 @@ export default async function handle(req, res) {
   if (req.method !== 'PUT') {
     return res.status(405).json({ success: false, message: 'Method not allowed' })
   }
-  if (!postId) {
-    return res.status(404).json({ success: false, message: 'Not found' })
-  }
 
   const post = await prisma.post.findMany()
 
   if (!post) {
-    return res.status(404).json({ success: false, message: 'Not found' })
+    return res.status(404).json({ success: false, message: 'No posts found' })
   }
 
   res.status(200).json({ success: true, post })

@@ -13,7 +13,7 @@ export default async (req, res) => {
   })
 
   if (!post) {
-    return res.status(404).json({ success: false, message: 'Not found' })
+    return res.status(404).json({ success: false, message: 'No published posts found' })
   }
 
   res.status(200).json({ success: true, post })
