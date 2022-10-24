@@ -39,10 +39,10 @@ function Header() {
         <div id='carrouselContainer'>
           <ImageSlider />
         </div>
-        {/* contenedor de firma */}
-        <div id='signatureCont'>
+        {/* contenedor de firma  <div id='signatureCont'>
           <img className='signatureLiane' src='/Logo-Liane.svg' />
-        </div>
+        </div> */}
+
 
 
       </div>
