@@ -36,7 +36,7 @@ export default function PostEditor(props) {
   const [data, setData] = useState('')
 
   // manage snackback (notification) logic
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
 
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {

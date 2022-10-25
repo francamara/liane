@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from 'react'
 
 
 export default function Editor({ onChange, value }) {
@@ -8,8 +8,8 @@ export default function Editor({ onChange, value }) {
 
   useEffect(() => {
     editorRef.current = {
-      CKEditor: require("@ckeditor/ckeditor5-react").CKEditor,
-      ClassicEditor: require("@ckeditor/ckeditor5-build-classic")
+      CKEditor: require('@ckeditor/ckeditor5-react').CKEditor,
+      ClassicEditor: require('@ckeditor/ckeditor5-build-classic')
     }
 
     setLoaded(true)
@@ -22,8 +22,8 @@ export default function Editor({ onChange, value }) {
           editor={ClassicEditor}
           data={value}
           onChange={(event, editor) => {
-            const data = editor.getData();
-            onChange(data);
+            const data = editor.getData()
+            onChange(data)
           }}
         />
       ) : (
