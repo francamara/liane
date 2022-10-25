@@ -1,10 +1,11 @@
 import React from 'react'
 import { getSession, useSession } from 'next-auth/react'
-import Login from '../components/Login'
-import { Box, Button, IconButton, Grid, Paper } from '@mui/material'
-import LnTypo from '../components/LnTypo'
-import DeleteIcon from '@mui/icons-material/Delete'
+import Link from 'next/link'
 import Router from 'next/router'
+import { Box, Button, IconButton, Grid, Paper } from '@mui/material'
+import DeleteIcon from '@mui/icons-material/Delete'
+import LnTypo from '../components/LnTypo'
+import Login from '../components/Login'
 import prisma from '../lib/prisma'
 
 export async function getServerSideProps(context) {
@@ -53,20 +54,17 @@ export default function Dashboard(props) {
         </Grid>
         <Grid container spacing={4}>
           <Grid item xs={12}>
-            <Button variant='contained' color='success' onClick={() => (createPost())}>CREAR NUEVO POST</Button>
+            <Button variant='contained' color='success' onClick={() => (createPost())}>
+              CREAR NUEVO POST
+            </Button>
           </Grid>
           {props.posts?.map((post, i) => (
             <Grid item xs={6} key={i}>
-              <Paper
-                sx={{
-                  p: 2,
-                  flexGrow: 1,
-                }}>
+              <Paper sx={{ p: 2, flexGrow: 1, }}>
                 <Grid container columns={6} spacing={1}>
-
                   <Grid item xs={5}>
                     <LnTypo variant='h3'>
-                      {post.title}
+                      <Link href={`/editor/${post.id}`}>{post.title}</Link>
                     </LnTypo>
                   </Grid>
                   <Grid item xs={1} display='flex' justifyContent='flex-end'>
@@ -95,8 +93,7 @@ export default function Dashboard(props) {
                       <LnTypo variant='subtitle'>
                         Publicado: {dateHelper(post.publishedAt)}
                       </LnTypo>
-                    </Grid >
-                  }
+                    </Grid >}
                 </Grid>
               </Paper>
             </Grid >

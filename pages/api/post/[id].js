@@ -27,5 +27,5 @@ export default async (req, res) => {
     return res.status(404).json({ success: false, message: 'Post not found' })
   }
 
-  res.status(200).json({ success: true, post })
+  res.status(204)
 }

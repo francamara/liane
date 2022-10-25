@@ -1,9 +1,10 @@
 import { getSession } from 'next-auth/react'
 import prisma from '../../../../lib/prisma'
 
-// PUT /api/update/:id, updates post content
+// PUT /api/update/:id, updates post content or title
 export default async function handle(req, res) {
-  const { postId, postTitle, postContent } = JSON.parse(req.body)
+  const postId = req.query.id
+  const postContent = req.body
   const session = await getSession({ req })
 
   if (!session) {
@@ -19,11 +20,11 @@ export default async function handle(req, res) {
   const post = await prisma.post.update({
     where: { id: postId },
     data: {
-      title: postTitle,
       content: postContent,
       updatedAt: new Date(),
     },
   })
+
 
   if (!post) {
     return res.status(404).json({ success: false, message: 'Post not found' })

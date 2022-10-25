@@ -1,36 +1,34 @@
-import { React, useState, useRef, useEffect } from 'react'
-import { useSession, } from 'next-auth/react'
+import React, { useEffect, useRef, useState } from "react"
 
-export default function Editor(props) {
-  let editorRef = useRef()
+
+export default function Editor({ onChange, value }) {
+  const editorRef = useRef()
   const { CKEditor, ClassicEditor } = editorRef.current || {}
-  const { data: session, status } = useSession()
-
   const [loaded, setLoaded] = useState(false)
-  const [data, setData] = useState('')
 
   useEffect(() => {
     editorRef.current = {
-      CKEditor: require('@ckeditor/ckeditor5-react').CKEditor,
-      ClassicEditor: require('@ckeditor/ckeditor5-build-classic'),
+      CKEditor: require("@ckeditor/ckeditor5-react").CKEditor,
+      ClassicEditor: require("@ckeditor/ckeditor5-build-classic")
     }
 
     setLoaded(true)
   }, [])
 
-
-  if (loaded && session && status === 'authenticated') {
-    return (
-      <>
+  return (
+    <>
+      {loaded ? (
         <CKEditor
           editor={ClassicEditor}
-          data={props.content}
+          data={value}
           onChange={(event, editor) => {
-            setData(editor.getData())
+            const data = editor.getData();
+            onChange(data);
           }}
         />
-        {data}
-      </>
-    )
-  }
+      ) : (
+        <div>Cargando...</div>
+      )}
+    </>
+  )
 }
