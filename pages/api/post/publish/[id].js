@@ -3,7 +3,7 @@ import prisma from '../../../../lib/prisma'
 
 // PUT /api/publish/:id, updates published to true
 export default async function handle(req, res) {
-  const postId = JSON.parse(req.body.id)
+  const postId = req.query.id
   const session = await getSession({ req })
 
   if (!session) {
@@ -18,7 +18,10 @@ export default async function handle(req, res) {
 
   const post = await prisma.post.update({
     where: { id: postId },
-    data: { published: true },
+    data: {
+      published: true,
+      publishedAt: new Date(),
+    },
   })
 
   if (!post) {

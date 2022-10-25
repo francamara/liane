@@ -3,7 +3,7 @@ import prisma from '../../../../lib/prisma'
 
 // PUT /api/publish/:id, updates published to true
 export default async function handle(req, res) {
-  const postId = JSON.parse(req.body.id)
+  const postId = req.query.id
   const session = await getSession({ req })
 
   if (!session) {
@@ -24,6 +24,6 @@ export default async function handle(req, res) {
     return res.status(404).json({ success: false, message: 'Post not found' })
   }
 
-  res.status(204).json({ success: true })
+  res.status(200).json({ success: true })
 }
 

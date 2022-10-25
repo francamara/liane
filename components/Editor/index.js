@@ -1,15 +1,7 @@
 import { React, useState, useRef, useEffect } from 'react'
-import { useSession, getSession, } from 'next-auth/react'
+import { useSession, } from 'next-auth/react'
 
-export const getServerSideProps = async (context) => {
-  const session = await getSession(context)
-
-  return {
-    props: { session, },
-  }
-}
-
-export default function Editor() {
+export default function Editor(props) {
   let editorRef = useRef()
   const { CKEditor, ClassicEditor } = editorRef.current || {}
   const { data: session, status } = useSession()
@@ -28,15 +20,17 @@ export default function Editor() {
 
 
   if (loaded && session && status === 'authenticated') {
-    return (<>
-      <CKEditor
-        editor={ClassicEditor}
-        data="<h1>Título del post</h1>"
-        onChange={(event, editor) => {
-          setData(editor.getData())
-        }}
-      />
-      {data}</>
+    return (
+      <>
+        <CKEditor
+          editor={ClassicEditor}
+          data={props.content}
+          onChange={(event, editor) => {
+            setData(editor.getData())
+          }}
+        />
+        {data}
+      </>
     )
   }
 }
