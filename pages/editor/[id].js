@@ -35,7 +35,7 @@ export default function PostEditor(props) {
   //aca vive post.content
   const [data, setData] = useState('')
 
-  // manage snackback (notification) logic
+  // manage snackbar (notification) logic
   const [open, setOpen] = useState(false)
 
   const handleClose = (event, reason) => {
@@ -44,7 +44,6 @@ export default function PostEditor(props) {
     }
     setOpen(false)
   }
-
 
   //useMemo porque el valor puede cambiar durante el delay
   const throttledUpdate = useMemo(
@@ -71,14 +70,14 @@ export default function PostEditor(props) {
       <>
         <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
           <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
-            {open ? `${'Autoguardado! (15 segundos)'}` : ''}
+            {open ? 'Autoguardado! (15 segundos)' : ''}
           </Alert>
         </Snackbar>
         <Box m={{ xs: '30px', sm: '100px' }}>
           <Grid container>
             <Grid item xs={12}>
               <Editor
-                value={props.post.content}
+                value={props.post.content ? props.post.content : `<h1>${props.post.title}</h1>`}
                 onChange={(data) => {
                   debouncedOnChange(data)
                   saveChanges(data)
