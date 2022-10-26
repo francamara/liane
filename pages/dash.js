@@ -1,6 +1,7 @@
 import React from 'react'
 import { getSession, useSession } from 'next-auth/react'
 import Router from 'next/router'
+import Head from 'next/head'
 import { Box, Button, Grid } from '@mui/material'
 import Login from '../components/Login'
 import prisma from '../lib/prisma'
@@ -28,19 +29,25 @@ export default function Dashboard(props) {
 
   if (session && status === 'authenticated') {
     return (
-      <Box m={{ xs: '30px', sm: '100px' }}>
-        <Grid container>
-          <Grid item xs={6}>
-            <Button variant='contained' color='success' onClick={() => (createPost())}>
-              CREAR NUEVO POST
-            </Button>
+      <>
+        <Head>
+          <title>Consola del administrador</title>
+          <link rel="icon" href="/gear.ico" />
+        </Head>
+        <Box m={{ xs: '30px', sm: '100px' }}>
+          <Grid container>
+            <Grid item xs={6}>
+              <Button variant='contained' color='success' onClick={() => (createPost())}>
+                CREAR NUEVO POST
+              </Button>
+            </Grid>
+            <Grid item xs={6} display='flex' justifyContent='flex-end'>
+              <Login />
+            </Grid>
           </Grid>
-          <Grid item xs={6} display='flex' justifyContent='flex-end'>
-            <Login />
-          </Grid>
-        </Grid>
-        <PostsList props={{ posts: props.posts }} />
-      </Box >
+          <PostsList props={{ posts: props.posts }} />
+        </Box >
+      </>
     )
   }
 

@@ -1,11 +1,14 @@
-import { React, useMemo, useState, useCallback, } from 'react'
+import { React, useMemo, useState, } from 'react'
 import { useSession, } from 'next-auth/react'
+import Head from 'next/head'
 import debounce from 'lodash/debounce'
 import throttle from 'lodash.throttle'
 import { Alert, Box, Grid, Snackbar } from '@mui/material'
 import Editor from '../../components/Editor'
 import Login from '../../components/Login'
 import prisma from '../../lib/prisma'
+
+const cooldownApi = 15 //en segundos
 
 export async function getServerSideProps(context) {
   const { id } = context.query
@@ -45,32 +48,34 @@ export default function PostEditor(props) {
     setOpen(false)
   }
 
-  //useMemo porque el valor puede cambiar durante el delay
+  //useMemo porque el valor puede cambiar desde que se llama la funcion y se termina el cooldown
   const throttledUpdate = useMemo(
     () =>
       throttle(content => {
         updatePost(props.post.id, content)
           .then(setOpen(true))
-      }, 1000 * 15), //<- cantidad de segundos de cooldown
+      }, cooldownApi * 1000),
     [props, data]
   )
-  const saveChanges = useCallback(
-    args => {
-      throttledUpdate(args)
-    },
-    [throttledUpdate]
-  )
-  //se guarda en el cliente medio segundo despues de que no haya mas keystrokes
-  const debouncedOnChange = debounce(setData, 500)
-  //una vez registrado un nuevo valor de data, actualizo el valor en la ref al throttle, que ejecuta la funcion
 
+  //se guarda en el cliente 600 ms despues de que no haya mas keystrokes
+  const debouncedOnChange = debounce(
+    (data) => {
+      setData(data)
+      throttledUpdate(data) //se llama a la api, a traves de un throttle
+    }, 600
+  )
 
   if (session && status === 'authenticated') {
     return (
       <>
-        <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Head>
+          <title>Editor</title>
+          <link rel="icon" href="/gear.ico" />
+        </Head>
+        <Snackbar open={open} autoHideDuration={3000} onClose={handleClose} anchorOrigin={{ vertical: 'top', horizontal: 'right' }}>
           <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
-            {open ? 'Autoguardado! (15 segundos)' : ''}
+            {open ? `Autoguardado! (${cooldownApi} segundos)` : ''}
           </Alert>
         </Snackbar>
         <Box m={{ xs: '30px', sm: '100px' }}>
@@ -80,7 +85,6 @@ export default function PostEditor(props) {
                 value={props.post.content ? props.post.content : `<h1>${props.post.title}</h1>`}
                 onChange={(data) => {
                   debouncedOnChange(data)
-                  saveChanges(data)
                 }} />
             </Grid>
             <Grid item xs>
