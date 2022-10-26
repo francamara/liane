@@ -2,7 +2,7 @@ import React from 'react'
 import Router from 'next/router'
 import Link from 'next/link'
 import debounce from 'lodash/debounce'
-import { Box, Divider, FormControlLabel, FormGroup, Grid, IconButton, List, ListItem, Switch } from '@mui/material'
+import { Divider, FormControlLabel, FormGroup, Grid, IconButton, Switch } from '@mui/material'
 import DeleteIcon from '@mui/icons-material/Delete'
 import EditIcon from '@mui/icons-material/Edit'
 import LnTypo from '../LnTypo'
@@ -50,85 +50,88 @@ export default function PostsList(props) {
 
   return (
     <>
-      <List sx={{ p: 2, flexGrow: 1, }}>
-        <Grid container columns={{ xs: 9, md: 12 }} display='flex' alignItems='center' my={2}>
-          <ListItem>
-            <Grid item display='flex' justifyContent='center' xs={4}>
-              <LnTypo variant='h6' weight='800'>
-                Titulo
-              </LnTypo>
-            </Grid>
-            <Grid item display='flex' justifyContent='center' xs={2}>
-              <LnTypo variant='h6' weight='800'>
-                Creado
-              </LnTypo>
-            </Grid>
-            <Grid item display='flex' justifyContent='center' xs={3}>
-              <LnTypo variant='h6' weight='800'>
-                Actualizado
-              </LnTypo>
-            </Grid>
-            <Grid item display='flex' justifyContent='center' xs={1}>
-              <LnTypo variant='h7' weight='800'>
-                Publicado
-              </LnTypo>
-            </Grid>
-            <Grid item display='flex' justifyContent='center' xs={2}>
-            </Grid>
+      <Grid container direction='column' display='flex' alignItems='center' my={2}>
+        <Grid container>
+          <Grid item display='flex' justifyContent='center' xs={4}>
+            <LnTypo variant='h6' weight='800'>
+              Titulo
+            </LnTypo>
+          </Grid>
+          <Grid item display='flex' justifyContent='center' xs={2}>
+            <LnTypo variant='h6' weight='800'>
+              Creado
+            </LnTypo>
+          </Grid>
+          <Grid item display='flex' justifyContent='center' xs={3}>
+            <LnTypo variant='h6' weight='800'>
+              Actualizado
+            </LnTypo>
+          </Grid>
+          <Grid item display='flex' justifyContent='center' xs={1}>
+            <LnTypo variant='h6' weight='800'>
+              Publicado
+            </LnTypo>
+          </Grid>
+          <Grid item display='flex' justifyContent='center' xs={2}>
+          </Grid>
 
-          </ListItem>
-          {props.props.posts?.map((post, i) => (
-            <Box key={i} flex={1}>
-              <ListItem>
-                <Grid item xs={4} display='flex' justifyContent='flex-start'>
-                  <LnTypo variant='h4' weight='600'>
-                    {post.title}
-                  </LnTypo>
-                </Grid>
-                <Grid item xs={2} display='flex' justifyContent='center'>
-                  <LnTypo variant='subtitle'>
-                    {dateHelper(post.createdAt, false)}
-                  </LnTypo>
-                </Grid>
-                <Grid item xs={3} display='flex' justifyContent='center'>
-                  <LnTypo variant='subtitle'>
-                    {dateHelper(post.updatedAt, true)}
-                  </LnTypo>
-                </Grid>
-
-                <Grid item xs={1}>
-                  <FormGroup>
-                    <FormControlLabel
-                      control={
-                        <Switch checked={post.published} size='small'
-                          onClick={(event) => {
-                            event.target.checked = true
-                            debouncedOnChange(post)
-                          }} />}
-                      label={post.publishedAt ? dateHelper(post.publishedAt, false) : ''}
-                      labelPlacement='bottom' />
-                  </FormGroup>
-                </Grid >
-
-                <Grid item display='flex' justifyContent='center' xs={1}>
-                  <Link href={`/editor/${post.id}`} passHref>
-                    <IconButton color='success'>
-                      <EditIcon />
-                    </IconButton>
-                  </Link>
-                </Grid>
-                <Grid item display='flex' justifyContent='flex-end' xs={1}>
-                  <IconButton color='error' onClick={() => (deletePost(post.id))}>
-                    <DeleteIcon />
-                  </IconButton>
-                </Grid>
-              </ListItem>
-              <Divider />
-            </Box>
-          ))
-          }
         </Grid>
-      </List >
+        {props.props.posts?.map((post) => (
+          <>
+            <Divider width='100%' />
+            <Grid item display='block'>
+              <Divider />
+            </Grid>
+            <Grid container alignItems='center' my={3}>
+              <Grid item xs={4} display='flex' justifyContent='flex-start'>
+                <LnTypo variant='h4' weight='600'>
+                  {post.title}
+                </LnTypo>
+              </Grid>
+              <Grid item xs={2} display='flex' justifyContent='center'>
+                <LnTypo variant='subtitle'>
+                  {dateHelper(post.createdAt, false)}
+                </LnTypo>
+              </Grid>
+              <Grid item xs={3} display='flex' justifyContent='center'>
+                <LnTypo variant='subtitle'>
+                  {dateHelper(post.updatedAt, true)}
+                </LnTypo>
+              </Grid>
+
+              <Grid item display='flex' justifyContent='center' xs={1}>
+                <FormGroup>
+                  <FormControlLabel
+                    control={
+                      <Switch checked={post.published} size='small'
+                        onClick={(event) => {
+                          event.target.checked = true
+                          debouncedOnChange(post)
+                        }} />}
+                    label={post.publishedAt ? dateHelper(post.publishedAt, false) : ''}
+                    labelPlacement='bottom' />
+                </FormGroup>
+              </Grid >
+
+              <Grid item display='flex' justifyContent='center' xs={1}>
+                <Link href={`/editor/${post.id}`} passHref>
+                  <IconButton color='success'>
+                    <EditIcon />
+                  </IconButton>
+                </Link>
+              </Grid>
+
+              <Grid item display='flex' justifyContent='flex-end' xs={1}>
+                <IconButton color='error' onClick={() => (deletePost(post.id))}>
+                  <DeleteIcon />
+                </IconButton>
+              </Grid>
+
+            </Grid>
+          </>
+        ))
+        }
+      </Grid>
     </>)
 }
 

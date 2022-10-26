@@ -1,9 +1,11 @@
 import { React, useMemo, useState, } from 'react'
 import { useSession, } from 'next-auth/react'
+import Link from 'next/link'
 import Head from 'next/head'
 import debounce from 'lodash/debounce'
 import throttle from 'lodash.throttle'
-import { Alert, Box, Grid, Snackbar } from '@mui/material'
+import { Alert, Box, Divider, Fab, Paper, Snackbar, TextField } from '@mui/material'
+import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import Editor from '../../components/Editor'
 import Login from '../../components/Login'
 import prisma from '../../lib/prisma'
@@ -33,10 +35,22 @@ async function updatePost(id, content) {
   })
 }
 
+async function renamePost(id, title) {
+  await fetch(`/api/post/rename/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(title)
+  })
+}
+
 export default function PostEditor(props) {
   const { data: session, status } = useSession()
   //aca vive post.content
   const [data, setData] = useState('')
+  //aca vive post.title
+  const [title, setTitle] = useState(props.post.title)
 
   // manage snackbar (notification) logic
   const [open, setOpen] = useState(false)
@@ -66,6 +80,15 @@ export default function PostEditor(props) {
     }, 600
   )
 
+  const throttledRename = useMemo(
+    () =>
+      throttle(content => {
+        renamePost(props.post.id, content)
+          .then(setOpen(true))
+      }, cooldownApi * 1000),
+    [props, data]
+  )
+
   if (session && status === 'authenticated') {
     return (
       <>
@@ -73,24 +96,35 @@ export default function PostEditor(props) {
           <title>Editor</title>
           <link rel="icon" href="/gear.ico" />
         </Head>
+
         <Snackbar open={open} autoHideDuration={3000} onClose={handleClose} anchorOrigin={{ vertical: 'top', horizontal: 'right' }}>
           <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
             {open ? `Autoguardado! (${cooldownApi} segundos)` : ''}
           </Alert>
         </Snackbar>
-        <Box m={{ xs: '30px', sm: '100px' }}>
-          <Grid container>
-            <Grid item xs={12}>
+
+        <Box mx={{ xs: '30px', md: '100px' }} mt={{ xs: '10px' }}>
+          <Link href='/dash' passHref>
+            <Fab>
+              <ArrowBackIcon />
+            </Fab>
+          </Link>
+
+
+          <Box my={{ xs: '20px', md: '50px' }}>
+            <Paper sx={{ p: 1, my: 2 }}>
+              <TextField my={1} value={title} fullWidth
+                onChange={(event) => setTitle(event.target.value)}
+                onBlur={(event) => throttledRename(event.target.value)} />
+              <Divider width='100%' sx={{ my: 1 }} />
               <Editor
                 value={props.post.content ? props.post.content : `<h1>${props.post.title}</h1>`}
                 onChange={(data) => {
                   debouncedOnChange(data)
                 }} />
-            </Grid>
-            <Grid item xs>
-              {data}
-            </Grid>
-          </Grid>
+            </Paper>
+          </Box>
+
         </Box>
       </>
     )
