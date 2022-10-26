@@ -33,11 +33,3 @@ a {
   font-display: swap;
   src: url("../public/fonts/Caecilia.woff2") format("woff2");
 }
-
-@font-face {
-  font-family: 'TommySoft';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../public/fonts/TommySoft.woff2") format("woff2");
-}

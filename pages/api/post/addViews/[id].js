@@ -2,7 +2,7 @@ import prisma from '../../../../lib/prisma'
 
 // PUT /api/addViews/:id, increments viewcount by one
 export default async function handle(req, res) {
-  const postId = JSON.parse(req.body.id)
+  const postId = req.query.id
 
   if (req.method !== 'PUT') {
     return res.status(405).json({ success: false, message: 'Method not allowed' })
@@ -13,7 +13,7 @@ export default async function handle(req, res) {
   }
 
   const post = await prisma.post.update({
-    where: { id: Number(postId) },
+    where: { id: postId },
     data: {
       viewcount: {
         increment: 1,

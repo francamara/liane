@@ -3,7 +3,8 @@ import prisma from '../../../../lib/prisma'
 
 // PUT /api/update/:id, updates post content
 export default async function handle(req, res) {
-  const { postId, postContent } = JSON.parse(req.body)
+  const postId = req.query.id
+  const postContent = req.body
   const session = await getSession({ req })
 
   if (!session) {
@@ -18,7 +19,10 @@ export default async function handle(req, res) {
 
   const post = await prisma.post.update({
     where: { id: postId },
-    data: { content: postContent },
+    data: {
+      content: postContent,
+      updatedAt: new Date(),
+    },
   })
 
   if (!post) {

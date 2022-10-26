@@ -1,6 +1,5 @@
 import React from 'react'
 import { useSession, getSession, signIn, signOut } from 'next-auth/react'
-import LnTypo from '../LnTypo'
 import { Button } from '@mui/material'
 
 export const getServerSideProps = async (context) => {
@@ -14,19 +13,16 @@ export const getServerSideProps = async (context) => {
 export default function Login() {
   const { data: session, status } = useSession()
 
-  if (status === 'authenticated') {
+  if (session && status === 'authenticated') {
     return (
-      <div>
-        <LnTypo variant='body'>Hola {session.user.name}</LnTypo>
-        <Button onClick={() => signOut()}>Cerrar</Button>
-      </div>
-    )
-  } else {
-    return (
-      <div>
-        <LnTypo variant='body'>No hay sesión iniciada</LnTypo>
-        <Button onClick={() => signIn()}>Entrar</Button>
-      </div>
+      <Button mx='5px' onClick={() => signOut()} variant='outlined' color='error'>
+        Cerrar sesión
+      </Button>
     )
   }
+  return (
+    <Button mx='5px' onClick={() => signIn()} variant='contained' color='success'>
+      Iniciar sesión
+    </Button>
+  )
 }
