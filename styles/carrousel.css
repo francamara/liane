@@ -14,16 +14,17 @@
   align-items: center;
 }
 
+.css-1m9128y {
+  display: none;
+}
+
 .sliderImage {
-  width: 100vw;
-  height: 80vh;
+  width: 100%;
 }
 
 #imagesFromCarrousel {
-  max-width: 100vw;
-  max-height: 80vh;
-
-
+  width: 100%;
+  height: 100%;
 }
 
 .css-1ps6pg7-MuiPaper-root {
