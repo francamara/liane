@@ -15,7 +15,7 @@ function Footer() {
 
 
         {/*TODO agregar tres lineas de texto que todavia no tenemos*/}
-        <Grid item xs={10} sm={3} container direction='column' alignItems='center'>
+        <Grid item xs={10} md={3} container direction='column' alignItems='center'>
 
           <Grid item xs>
             <img src='/Logo-Pinche-Mito-Negro.svg' alt='El Pinche Mito'></img>
@@ -31,7 +31,7 @@ function Footer() {
 
 
         {/*segundo item, links de footer internos, redes sociales, declaracion de derechos*/}
-        <Grid item xs={10} sm={3} container direction='column' spacing={2} alignItems='center'>
+        <Grid item xs={10} md={3} container direction='column' spacing={2} alignItems='center'>
 
           <Grid item xs>
             <Link href="/">
@@ -58,7 +58,7 @@ function Footer() {
         </Grid>
 
         {/*tercer item, firma*/}
-        <Grid item xs={10} sm={3} container>
+        <Grid item xs={10} md={3} container>
           <Grid item xs>
             <img id='footerSignature' src='/Logo-Liane.svg' alt='Liane Counselor' />
           </Grid>
