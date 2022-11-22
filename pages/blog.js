@@ -9,6 +9,9 @@ export async function getServerSideProps() {
   const posts = await JSON.parse(JSON.stringify(await prisma.post.findMany({
     where: {
       published: true
+    },
+    orderBy: {
+      publishedAt: 'desc'
     }
   })))
 
