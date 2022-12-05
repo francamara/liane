@@ -14,7 +14,7 @@ export default async (req, res) => {
 
   const post = await prisma.post.findUnique({
     where: {
-      id: postId,
+      id: parseInt(postId),
     },
     include: {
       author: {
