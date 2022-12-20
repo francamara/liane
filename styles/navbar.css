@@ -1,0 +1,96 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+
+}
+
+#myButton {
+  /* font-family: 'Courier New', Courier, monospace;
+  background: transparent; */
+  color: #1d1d1d;
+  border-radius: 0px;
+  /* font-weight: bold;
+  text-decoration: none; */
+  padding: 4px;
+  text-transform: none;
+}
+
+#myButton:hover {
+  background: #ffe7a3;
+  color: #1d1d1d;
+}
+
+#myButton:active {
+  background: #fafafa;
+  color: #1d1d1d;
+}
+
+
+.navbarMobileButton {
+  display: none;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+  .navbarMobileButton {
+    color: #37B9BC;
+    border-radius: 0px;
+    /* font-weight: bold;
+    text-decoration: none; */
+    padding: 4px;
+    text-transform: none;
+    display: block;
+    font-size: xx-large;
+  }
+
+
+
+  .navbarMobileButton:hover {
+    background: #37B9BC;
+    color: #fafafa;
+  }
+
+  .navbarmobile:active {
+    background-color: #197072;
+  }
+
+
+
+  .navbar {
+    display: flex;
+    position: absolute;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    height: 450px;
+    background-color: #fafafa;
+    border-top: 1px solid #197072;
+
+    gap: 20px;
+    border-bottom: 1px solid #197072;
+    border-left: 1px solid #197072;
+    border-right: 1px solid #197072;
+    z-index: 5;
+    display: none;
+  }
+
+  #navbarText {
+    color: #fafafa;
+    font-weight: bold;
+  }
+
+  .navbar.expanded {
+    display: block;
+    background: #37B9BC;
+  }
+
+
+  .navbar Button {
+    display: block;
+  }
+}

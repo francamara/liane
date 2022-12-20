@@ -16,33 +16,3 @@
   width: auto;
   height: 40vh;
 }
-
-
-
-#navbar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2vh;
-}
-
-#myButton {
-  /* font-family: 'Courier New', Courier, monospace;
-  background: transparent; */
-  color: #1d1d1d;
-  border-radius: 0px;
-  /* font-weight: bold;
-  text-decoration: none; */
-  padding: 4px;
-  text-transform: none;
-}
-
-#myButton:hover {
-  background: #ffe7a3;
-  color: #1d1d1d;
-}
-
-#myButton:active {
-  background: #fafafa;
-  color: #1d1d1d;
-}
