@@ -3,14 +3,15 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  gap: 20px;
 }
 
 #footerSignature {
   display: flex;
   align-self: flex-end;
   justify-content: flex-end;
-  width: auto;
-  height: 25vh;
+  max-width: 100%;
+  height: auto;
 }
 
 #footerLogoPodcast {
