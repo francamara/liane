@@ -18,7 +18,9 @@ export default async function handle(req, res) {
   }
 
   const post = await prisma.post.update({
-    where: { id: postId },
+    where: {
+      id: parseInt(postId),
+    },
     data: {
       content: postContent,
       updatedAt: new Date(),

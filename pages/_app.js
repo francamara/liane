@@ -13,6 +13,7 @@ import '../styles/hero.css'
 import '../styles/footer.css'
 import '../styles/mensaje.css'
 import '../styles/dashboard.css'
+import '../styles/blog.css'
 import { SessionProvider } from 'next-auth/react'
 
 // Client-side cache, shared for the whole session of the user in the browser.

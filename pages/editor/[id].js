@@ -16,7 +16,7 @@ export async function getServerSideProps(context) {
   const { id } = context.query
   const post = await prisma.post.findUnique({
     where: {
-      id: id,
+      id: parseInt(id),
     },
   })
 
