@@ -5,6 +5,7 @@ import Header from '../components/Header'
 import Hero from '../components/Hero'
 import Mensaje from '../components/Mensaje'
 import Footer from '../components/Footer'
+import ContactForm from '../components/ContactForm'
 
 export default function Home() {
   return (
@@ -27,7 +28,7 @@ export default function Home() {
       {/* Componentes:
         - introcounseling (nada complejo, comportamiento casi identico)
         - presentacion (responsive stack vertical a grid 2d con titulo y foto a la izq de texto)
-        - presentacion2 (nada complejo, comportamiento casi identico pero en el sketch de mobile la foto final aparece antes?)
+        - presentacion2 (nada complejo, pero en el sketch de mobile la foto final aparece antes?)
       Cosas que podemos resolver sin necesidad de declarar mas componentes, solo con css o props de mui:
         - sillon de fondo (dimensiones y posicionamiento vertical responsive) */}
 
@@ -39,10 +40,12 @@ export default function Home() {
       {/* La idea de lo que hacia este componente se movio al blog, esto pasaría a ser lo sig
 
       Componentes:
-        - FAQ (falta diseño y data, asi que ponemos cualquier cosa para mostrar y si no nos dan nada para llenar lo dejamos fuera de la v1)
+        - FAQ (falta diseño y data, hacer algo asi nomas y pedir contenido o descartar)
         - ContactForm (responsive stack vertical a grid 2d con titulo y foto a la izq de texto)
       Cosas que podemos resolver sin necesidad de declarar mas componentes, solo con css o props de mui:
         - imagen de fondo oscurecida */}
+
+      <ContactForm />
 
       <Footer />
       {/* El footer ahora tiene dos partecinhas

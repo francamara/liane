@@ -6,6 +6,14 @@ const theme = createTheme({
     h1: {
       color: '#fafafa'
     },
+  },
+  palette: {
+    neutral: {
+      light: '#fafafa',
+      main: '#fafafa',
+      dark: '#fafafa',
+      contrastText: '#000'
+    }
   }
 })
 
