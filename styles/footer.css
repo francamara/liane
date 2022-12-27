@@ -22,6 +22,16 @@
   width: auto;
 }
 
+.contactform {
+  margin: 0em 20%;
+  padding-bottom: 1em;
+}
+
+.formcontainer {
+  background-image: url(https://wallpapercrafter.com/sizes/1920x1080/273537-coffee-shop-coffe-cup-cup-and-saucer-and-table-hd.jpg);
+  background-size: cover;
+}
+
 @media screen and (max-width: 600px) {
   #footerSignature {
     height: auto;
@@ -31,5 +41,10 @@
   #footerLogoPodcast {
     height: auto;
     width: 90vw;
+  }
+
+  .contactform {
+    margin: 0em 12%;
+    padding-bottom: 1em;
   }
 }
