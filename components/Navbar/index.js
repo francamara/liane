@@ -9,11 +9,13 @@ import LnTypo from '../LnTypo'
 
 
 const navLinkData = [
-  { item: 'Inicio', ref: '/' },
-  { item: '¿Qué es counselling?', ref: '#hero' },
+  { item: 'Home', ref: '/', className: 'home' },
+  { item: '¿Qué es counseling?', ref: '#hero' },
   { item: '¿Quién soy?', ref: '#aboutme' },
   { item: '¿Cómo puedo ayudarte?', ref: '#mensaje' },
   { item: 'El Pinche Mito', ref: '#bannerPodcast' },
+  { item: 'FAQ', ref: '/' },
+  { item: 'BLOG', ref: '/' },
   { item: 'Contáctame', ref: '#footer' }
 ]
 
@@ -25,7 +27,6 @@ export default function Navbar() {
 
   return (
     <div className="nav">
-
       <IconButton
         className="navbarMobileButton"
         onClick={() => {
@@ -34,6 +35,7 @@ export default function Navbar() {
       >
         <DensitySmallIcon />
       </IconButton>
+      <img className='logoMovilLiane' src='/LIANE-logo.png' ></img>
 
       <div
         className={
