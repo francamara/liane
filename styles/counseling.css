@@ -1,0 +1,13 @@
+.counselingContainer {
+  background-color: #cac5c1;
+  color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#counselingQuote {
+  background-color: #f3ece7;
+  color: #111;
+}

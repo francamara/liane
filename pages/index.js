@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import BannerPodcast from '../components/BannerPodcast'
 import Header from '../components/Header'
+import Counseling from '../components/Counseling'
 import Hero from '../components/Hero'
 import Mensaje from '../components/Mensaje'
 import Footer from '../components/Footer'
@@ -23,6 +24,7 @@ export default function Home() {
       Cosas que podemos resolver sin necesidad de declarar mas componentes, solo con css o props de mui:
         - sillon de fondo (dimensiones y posicionamiento vertical responsive) */}
 
+      <Counseling />
 
       <Hero />
       {/* Componentes:
