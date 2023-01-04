@@ -5,7 +5,7 @@ import React from 'react'
 
 function Counseling() {
   return (
-    <div className="counselingContainer">
+    <div id="counseling">
       <Grid container direction='column'>
 
         <LnTypo variant='h6'>¿QUÉ ES EL COUNSELING?</LnTypo>

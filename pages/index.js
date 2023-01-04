@@ -4,6 +4,8 @@ import BannerPodcast from '../components/BannerPodcast'
 import Header from '../components/Header'
 import Counseling from '../components/Counseling'
 import AboutMe from '../components/AboutMe'
+import Ayudarte from '../components/Ayudarte'
+import FAQ from '../components/FAQ'
 import Mensaje from '../components/Mensaje'
 import Footer from '../components/Footer'
 import ContactForm from '../components/ContactForm'
@@ -36,13 +38,9 @@ export default function Home() {
 
 
       <Mensaje />
-      {/* La idea de lo que hacia este componente se movio al blog, esto pasaría a ser lo sig
+      <Ayudarte />
+      <FAQ />
 
-      Componentes:
-        - FAQ (falta diseño y data, hacer algo asi nomas y pedir contenido o descartar)
-        - ContactForm (responsive stack vertical a grid 2d con titulo y foto a la izq de texto)
-      Cosas que podemos resolver sin necesidad de declarar mas componentes, solo con css o props de mui:
-        - imagen de fondo oscurecida */}
 
       <ContactForm />
 
