@@ -11,9 +11,9 @@ function Counseling() {
         <LnTypo variant='h6'>¿QUÉ ES EL COUNSELING?</LnTypo>
 
         <Grid id="counselingQuote">
-          <LnTypo variant='body1'> El Counseling es la disciplina de ayuda que integra conocimientos del campo de la filosofía,
+          <LnTypo variant='body1'> &quot;El Counseling es la disciplina de ayuda que integra conocimientos del campo de la filosofía,
             la psicología, la educación, la sociología, y la antropología, con la intención de asistir al ser
-            humano en el proceso de crecimiento, desarrollo y despliegue de sus potencialidades.
+            humano en el proceso de crecimiento, desarrollo y despliegue de sus potencialidades.&quot;
           </LnTypo>
           <LnTypo> Andrés Sánchez Bodas
 
@@ -24,7 +24,7 @@ function Counseling() {
             El counseling (consultoría psicológica en español)
             es una profesión de ayuda para el bienestar y
             salud emociona y mental. Hace énfasis en la escucha activa, la aceptación positiva incondicional y
-            la congruencia del profesional que la ejerce. El enfoque es horizontal. No hay  comillas pacientes comillas
+            la congruencia del profesional que la ejerce. El enfoque es horizontal. No hay  &quot; pacientes &quot;
             que con
             paciencia tienen que esperar cura desde una autoridad superior. Es un espacio terapéutico de
             rigurosa confidencialidad que promueve el bienestar y la salud mental. El counseling ayuda a que
