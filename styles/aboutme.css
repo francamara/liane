@@ -1,6 +1,8 @@
-#aboutMe {
+#aboutme {
   display: flex;
   justify-content: center;
+  background-color: #3e6cca;
+  color: #fafafa;
 }
 
 .aboutMeBackground {

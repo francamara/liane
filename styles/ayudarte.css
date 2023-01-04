@@ -1,0 +1,22 @@
+#ayudarte {
+  display: flex;
+  flex-direction: column;
+}
+
+#ayudarteIntro {
+  background-image:
+    url(../public/modern-minimalist-interior-with-an-armchair-on-empty-cream-color-wall-background-3d-rendering.jpg);
+  color: #000;
+}
+
+#ayudarteList {
+  background-color: #3e6caa;
+  color: #fafafa;
+}
+
+
+
+#elPincheMito {
+  background-color: #cac5c1;
+  color: #000;
+}

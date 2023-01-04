@@ -20,7 +20,7 @@ function AboutMe() {
         </Grid>
         {/*media query, si es XS, pone el titulo en fila con la foto*/}
         {isXs ? <Grid item xs={7.5} sm={7} container justifyContent='flex-start'>
-          <LnTypo variant='h3'>Quien Soy</LnTypo>
+          <LnTypo variant='h3'>¡Quien Soy?</LnTypo>
         </Grid> : ''}
 
         <Grid item xs={10} sm={6} container alignContent='center'>
