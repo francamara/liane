@@ -34,90 +34,110 @@ const StyledTextField = styled(TextField)({
 })
 
 export default function ContactForm() {
+  async function handleOnSubmit(e) {
+    e.preventDefault()
+
+    const formData = {}
+
+    Array.from(e.currentTarget.elements).forEach(field => {
+      if (!field.name) return
+      formData[field.name] = field.value
+    })
+
+    await fetch('/api/message', {
+      method: 'POST',
+      body: JSON.stringify(formData)
+    })
+  }
+
+
   return (
     <div className='formcontainer'>
       <div className="contactform">
 
-        <Grid container spacing={4} sx={{ display: 'flex' }}>
-          <Grid item xs={6}>
-            <FormControl fullWidth>
-              <StyledTextField id='name' label='Nombre' />
-            </FormControl>
-          </Grid>
+        <form method="post" onSubmit={handleOnSubmit}>
 
-          <Grid item xs={6}>
-            <Autocomplete
-              id="country"
-              options={countries}
-              autoHighlight
-              fullWidth
-              getOptionLabel={(option) => option.label}
-              renderOption={(props, option) => (
-                <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
-                  <img
-                    loading="lazy"
-                    width="20"
-                    src={`https://flagcdn.com/w20/${option.code.toLowerCase()}.png`}
-                    srcSet={`https://flagcdn.com/w40/${option.code.toLowerCase()}.png 2x`}
-                    alt=""
+          <Grid container spacing={4} sx={{ display: 'flex' }}>
+            <Grid item xs={6}>
+              <FormControl fullWidth>
+                <StyledTextField name='name' label='Nombre' />
+              </FormControl>
+            </Grid>
+
+            <Grid item xs={6}>
+              <Autocomplete
+                options={countries}
+                autoHighlight
+                fullWidth
+                getOptionLabel={(option) => option.label}
+                renderOption={(props, option) => (
+                  <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
+                    <img
+                      loading="lazy"
+                      width="20"
+                      src={`https://flagcdn.com/w20/${option.code.toLowerCase()}.png`}
+                      srcSet={`https://flagcdn.com/w40/${option.code.toLowerCase()}.png 2x`}
+                      alt=""
+                    />
+                    {option.label} ({option.code}) +{option.phone}
+                  </Box>
+                )}
+                renderInput={(params) => (
+                  <StyledTextField
+                    name="country"
+                    {...params}
+                    label="País"
+                    inputProps={{
+                      ...params.inputProps,
+                      autoComplete: 'new-password', // disable autocomplete and autofill
+                    }}
                   />
-                  {option.label} ({option.code}) +{option.phone}
-                </Box>
-              )}
-              renderInput={(params) => (
-                <StyledTextField
-                  {...params}
-                  label="País"
-                  inputProps={{
-                    ...params.inputProps,
-                    autoComplete: 'new-password', // disable autocomplete and autofill
-                  }}
-                />
-              )}
-            />
-          </Grid>
+                )}
+              />
+            </Grid>
 
-          <Grid item xs={6}>
-            <FormControl fullWidth>
-              <StyledTextField id='city' label='Ciudad' />
-            </FormControl>
-          </Grid>
+            <Grid item xs={6}>
+              <FormControl fullWidth>
+                <StyledTextField name='city' label='Ciudad' />
+              </FormControl>
+            </Grid>
 
-          <Grid item xs={6}>
-            <FormControl fullWidth>
-              <StyledTextField id='phone' label='Teléfono' />
-            </FormControl>
-          </Grid>
+            <Grid item xs={6}>
+              <FormControl fullWidth>
+                <StyledTextField name='phone' label='Teléfono' />
+              </FormControl>
+            </Grid>
 
-          <Grid item xs={12}>
-            <FormControl fullWidth>
-              <StyledTextField id='email' label='Correo' />
-            </FormControl>
-          </Grid>
+            <Grid item xs={12}>
+              <FormControl fullWidth>
+                <StyledTextField name='email' label='Correo' />
+              </FormControl>
+            </Grid>
 
-          <Grid item xs={12}>
-            <FormControl fullWidth>
-              <StyledTextField id='message' label='Consulta' multiline minRows={3} />
-            </FormControl>
-          </Grid>
-          <Grid item xs={10} sx={{ display: 'flex', justifyContent: 'flex-start' }}>
-            <FormControlLabel control={
-              <Checkbox sx={{
-                color: 'white',
-                '&.Mui-checked': {
+            <Grid item xs={12}>
+              <FormControl fullWidth>
+                <StyledTextField name='content' label='Consulta' multiline minRows={3} />
+              </FormControl>
+            </Grid>
+            <Grid item xs={10} sx={{ display: 'flex', justifyContent: 'flex-start' }}>
+              <FormControlLabel control={
+                <Checkbox sx={{
                   color: 'white',
-                },
-              }} />}
-            componentsProps={{
-              typography: { color: 'white' }
-            }}
-            label="Eres mayor de edad y aceptas los términos y condiciones"
-            />
+                  '&.Mui-checked': {
+                    color: 'white',
+                  },
+                }} required />}
+              componentsProps={{
+                typography: { color: 'white' }
+              }}
+              label="Eres mayor de edad y aceptas los términos y condiciones"
+              />
+            </Grid>
+            <Grid item xs={2} sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
+              <Button variant='contained' color='neutral' sx={{ maxHeight: '2.5rem' }} type='submit'>Enviar</Button>
+            </Grid>
           </Grid>
-          <Grid item xs={2} sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
-            <Button variant='contained' color='neutral' sx={{ maxHeight: '2.5rem' }}>Enviar</Button>
-          </Grid>
-        </Grid>
+        </form>
       </div>
     </div>
   )

@@ -18,6 +18,17 @@ model User {
   posts   Post[]
 }
 
+model Message {
+  id        Int      @id @default(autoincrement()) @map("_id")
+  name      String
+  email     String
+  phone     String
+  city      String
+  country   String
+  content   String
+  createdAt DateTime @default(now())
+}
+
 model Post {
   id          Int       @id @default(autoincrement()) @map("_id")
   title       String

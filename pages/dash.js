@@ -6,14 +6,17 @@ import { Box, Button, Paper, Grid } from '@mui/material'
 import Login from '../components/Login'
 import prisma from '../lib/prisma'
 import PostsList from '../components/PostList'
+import MessageList from '../components/MessageList'
+import LnTypo from '../components/LnTypo'
 
 export async function getServerSideProps(context) {
 
   const session = await getSession(context)
   const posts = JSON.parse(JSON.stringify(await prisma.post.findMany()))
+  const messages = JSON.parse(JSON.stringify(await prisma.message.findMany()))
 
   return {
-    props: { session, posts }
+    props: { session, posts, messages }
   }
 }
 
@@ -47,6 +50,12 @@ export default function Dashboard(props) {
               </Grid>
             </Grid>
             <PostsList props={{ posts: props.posts }} />
+          </Paper>
+          <Paper sx={{ pt: 2, px: 2 }}>
+            <LnTypo variant='h4'>
+              Mensajes
+            </LnTypo>
+            <MessageList props={{ messages: props.messages }} />
           </Paper>
         </Box >
       </>
