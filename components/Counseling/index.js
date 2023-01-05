@@ -1,25 +1,39 @@
 import LnTypo from '../LnTypo'
-import { Grid } from '@mui/material'
+import { Grid, Paper } from '@mui/material'
 import React from 'react'
+
+
 
 
 function Counseling() {
   return (
-    <div id="counseling">
-      <Grid container direction='column'>
 
-        <LnTypo variant='h6'>¿QUÉ ES EL COUNSELING?</LnTypo>
+    <div id="counseling" >
+      <Grid
+        container
+        direction='row'
+        justifyContent='center'
+        alignItems='center'
+        spacing={3}
+      >
 
-        <Grid id="counselingQuote">
-          <LnTypo variant='body1'> &quot;El Counseling es la disciplina de ayuda que integra conocimientos del campo de la filosofía,
-            la psicología, la educación, la sociología, y la antropología, con la intención de asistir al ser
-            humano en el proceso de crecimiento, desarrollo y despliegue de sus potencialidades.&quot;
-          </LnTypo>
-          <LnTypo> Andrés Sánchez Bodas
-
+        <Grid item sm={6}>
+          <LnTypo variant='h6' id='subtitleBlue'>¿QUÉ ES EL COUNSELING?
           </LnTypo>
         </Grid>
-        <Grid id="counselingDefinition">
+        <Grid item sm={6}></Grid>
+
+        <Grid item sm={12} >
+          <Paper id='counselingQuote' >
+            <LnTypo variant='body1'> &quot;El Counseling es la disciplina de ayuda que integra conocimientos del campo de la filosofía,
+              la psicología, la educación, la sociología, y la antropología, con la intención de asistir al ser
+              humano en el proceso de crecimiento, desarrollo y despliegue de sus potencialidades.&quot;
+            </LnTypo>
+            <LnTypo id='quoteAuthor'> Andrés Sánchez Bodas
+            </LnTypo>
+          </Paper>
+        </Grid>
+        <Grid item sm={12} id="counselingDefinition">
           <LnTypo variant='body1'>
             El counseling (consultoría psicológica en español)
             es una profesión de ayuda para el bienestar y
@@ -34,7 +48,7 @@ function Counseling() {
           </LnTypo>
         </Grid>
       </Grid>
-    </div>
+    </div >
   )
 }
 

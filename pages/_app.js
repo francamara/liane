@@ -14,7 +14,6 @@ import '../styles/aboutme.css'
 import '../styles/ayudarte.css'
 import '../styles/faq.css'
 import '../styles/footer.css'
-import '../styles/mensaje.css'
 import '../styles/dashboard.css'
 import '../styles/blog.css'
 import { SessionProvider } from 'next-auth/react'
@@ -31,6 +30,8 @@ export default function MyApp(props) {
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
+
+
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />

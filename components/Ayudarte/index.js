@@ -4,7 +4,7 @@ function Ayudarte() {
   return (
     <div id='ayudarte'>
       <div id='ayudarteIntro'>
-        <LnTypo variant='h4'>¿COMO PUEDO AYUDARTE?</LnTypo>
+        <LnTypo variant='h4' id='subtitleBlue'>¿COMO PUEDO AYUDARTE?</LnTypo>
         <LnTypo variant='body1'> En las consultas conmigo, el paso y el camino los decides tú. Yo te acompaño y te apoyo con toda mi
           atención y la experiencia de mis horas de vuelo. Tus problemas e inquietudes merecen un espacio en
           donde atenderlos: a tu ritmo; a tus tiempos; en un espacio seguro, cálido, respetuoso y confidencial.
@@ -40,7 +40,7 @@ function Ayudarte() {
         src='/campoLiane.jpg' />
       </div>
       <div id='elPincheMito'>
-        <LnTypo variant='h3'>EL PINCHE MITO</LnTypo>
+        <LnTypo variant='h3' id='subtitleBlue'>EL PINCHE MITO</LnTypo>
         <LnTypo variant='body1'>El pinche mito es un podcast para no fundamentalistas, donde hablo de diferentes temas que
           resultan recurrentes en mi consulta que me han llevado a la expresión de que esto u otro es un
           &quot; pinche mito &quot;. Lo que lo hace mito, es que no es verdad y se da por hecho y consagrado y por lo

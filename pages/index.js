@@ -6,7 +6,6 @@ import Counseling from '../components/Counseling'
 import AboutMe from '../components/AboutMe'
 import Ayudarte from '../components/Ayudarte'
 import FAQ from '../components/FAQ'
-import Mensaje from '../components/Mensaje'
 import Footer from '../components/Footer'
 import ContactForm from '../components/ContactForm'
 
@@ -37,7 +36,6 @@ export default function Home() {
         - sillon de fondo (dimensiones y posicionamiento vertical responsive) */}
 
 
-      <Mensaje />
       <Ayudarte />
       <FAQ />
 
