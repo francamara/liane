@@ -13,7 +13,7 @@ const navLinkData = [
   { item: '¿Qué es counseling?', ref: '#counseling' },
   { item: '¿Quién soy?', ref: '#aboutme' },
   { item: '¿Cómo puedo ayudarte?', ref: '#ayudarte' },
-  { item: 'El Pinche Mito', ref: '#bannerPodcast' },
+  { item: 'El Pinche Mito', ref: '#elPincheMito' },
   { item: 'FAQ', ref: '#faq' },
   { item: 'BLOG', ref: '/' },
   { item: 'Contáctame', ref: '#footer' }

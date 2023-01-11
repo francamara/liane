@@ -3,19 +3,65 @@
   flex-direction: column;
 }
 
-#ayudarteIntro {
+.ayudarteIntro {
   background-image:
-    url(../public/modern-minimalist-interior-with-an-armchair-on-empty-cream-color-wall-background-3d-rendering.jpg);
+    url(../public/armchair.jpg);
+  background-size: 100vw 700px;
+  background-repeat: no-repeat;
+  background-position: bottom;
   color: #000;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+
+/* la imagen de ayudarte intro cambia de tamaño manualmente con el siguiente input media queries */
+
+
+
+#ayudarteSofa {
+  position: fixed;
+  height: 100%;
+  width: auto;
+  z-index: 1;
 }
 
 #ayudarteList {
   background-color: #3e6caa;
   color: #fafafa;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-bottom: 40px;
+  padding-top: 40px;
 }
 
 
 
 #elPincheMito {
   background-color: #cac5c1;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+@media screen and (min-width:1400px) {
+  .ayudarteIntro {
+    background-size: 100vw 700px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .ayudarteIntro {
+    background-size: 100vw 700px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .ayudarteIntro {
+    background-size: 900px 1000px;
+    background-position-x: left;
+  }
 }

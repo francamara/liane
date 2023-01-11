@@ -17,11 +17,11 @@ function Counseling() {
         spacing={3}
       >
 
-        <Grid item sm={6}>
+        <Grid item sm={6} md={8}>
           <LnTypo variant='h6' id='subtitleBlue'>¿QUÉ ES EL COUNSELING?
           </LnTypo>
         </Grid>
-        <Grid item sm={6}></Grid>
+        <Grid item sm={6} md={4}></Grid>
 
         <Grid item sm={12} >
           <Paper id='counselingQuote' >

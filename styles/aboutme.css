@@ -1,8 +1,13 @@
 #aboutme {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #3e6cca;
   color: #fafafa;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .aboutMeBackground {
@@ -27,6 +32,7 @@
 
 #upperSection {
   display: flex;
+
 }
 
 #lowerSection {
