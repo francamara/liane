@@ -70,12 +70,10 @@ function Ayudarte() {
 
         </Grid>
       </div>
-      <div> <img
+      <img
         id='footsandwoman'
         alt='Pies en la play y señora tomando café'
         src='/campoLiane.jpg' />
-
-      </div>
       <div id='elPincheMito'>
         <Grid container spacing={4}>
           <Grid item sm={12}>

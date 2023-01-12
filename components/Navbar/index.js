@@ -43,7 +43,11 @@ export default function Navbar() {
         }
       >
 
-        <Grid container direction={{ xs: 'column', sm: 'row' }} justifyContent='center' alignItems='center' spacing={{ xs: '0', sm: '24' }}>
+        <Grid
+          container direction={{ xs: 'column', sm: 'row' }}
+          justifyContent='center' alignItems='center'
+          spacing={{ xl: 6, lg: 4, md: 2 }}
+          columns={8}>
           {/*Se mapea el array con las etiquetas y rutas del navbar para generar cada link*/}
           {navLinkData.map((navLink, i) => (
             <Grid item sm='auto' key={i}>

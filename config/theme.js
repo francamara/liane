@@ -1,4 +1,5 @@
-import { createTheme, responsiveFontSizes } from '@mui/material/styles'
+import { createTheme } from '@mui/material/styles'
+//responsiveFontSizes
 // Create a theme instance.
 let theme = createTheme({
 
@@ -7,6 +8,9 @@ let theme = createTheme({
     h1: {
       color: '#fafafa'
     },
+
+
+
   },
   palette: {
     neutral: {
@@ -18,5 +22,11 @@ let theme = createTheme({
   }
 })
 
-theme = responsiveFontSizes(theme)
+theme.typography.h6 = {
+  fontSize: '1.2rem',
+  '@media (max-width:1200px)': { fontSize: '1rem' },
+  '@media (max-width:1000px)': { fontSize: '0.8rem' }
+}
+
+/*theme = responsiveFontSizes(theme) */
 export default theme

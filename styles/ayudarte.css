@@ -37,6 +37,14 @@
   padding-top: 40px;
 }
 
+#ayudarteList ul {
+  padding-left: 0vw;
+}
+
+#footsandwoman {
+  width: 100vw;
+  height: 500px;
+}
 
 
 #elPincheMito {
@@ -47,9 +55,20 @@
   padding-top: 40px;
 }
 
+@media screen and (min-width:2000px) {
+  #footsandwoman {
+    height: 800px;
+  }
+}
+
 @media screen and (min-width:1400px) {
   .ayudarteIntro {
-    background-size: 100vw 700px;
+    background-size: 100vw 900px;
+    background-position-y: -450px;
+  }
+
+  #footsandwoman {
+    height: 700px;
   }
 }
 
@@ -57,11 +76,19 @@
   .ayudarteIntro {
     background-size: 100vw 700px;
   }
+
+  #footsandwoman {
+    height: 360px;
+  }
 }
 
 @media screen and (max-width: 450px) {
   .ayudarteIntro {
     background-size: 900px 1000px;
     background-position-x: left;
+  }
+
+  #footsandwoman {
+    height: 250px;
   }
 }
