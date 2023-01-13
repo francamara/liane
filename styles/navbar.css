@@ -1,3 +1,7 @@
+.nav {
+  opacity: 70%;
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -5,7 +9,6 @@
   gap: 2vh;
   background: #3e6cca;
   height: 45px;
-  opacity: 70%;
 
 }
 
@@ -40,6 +43,7 @@
 }
 
 
+
 /*@media screen and (max-width: 1100px) {
   .navbar Button {
     font-size: 10px;
@@ -64,6 +68,7 @@
   .nav {
     background: #3e6cca;
     display: flex;
+    height: 110px;
   }
 
 
@@ -75,14 +80,15 @@
     text-decoration: none; */
     padding: 4px;
     text-transform: none;
-    display: block;
-    font-size: xx-large;
     display: flex;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: centers;
   }
 
+  #burger {
+    font-size: xx-large;
 
+  }
 
   .navbarMobileButton:hover {
     background: #5d91fa;
@@ -96,13 +102,10 @@
 
 
   .navbar {
-    display: flex;
+
     position: absolute;
     left: 0;
-    flex-direction: column;
     width: 100%;
-    height: 45px;
-    background-color: #111;
     background: #3e6cca;
     border-top: 1px solid;
     gap: 20px;
@@ -114,6 +117,10 @@
     opacity: 100%;
   }
 
+  #myButton {
+    padding: 14px;
+  }
+
   #navbarText {
     color: #fafafa;
     font-weight: bold;
@@ -123,9 +130,9 @@
   .navbar.expanded {
     display: block;
     background: #3e6cca;
-    height: 50vh;
-    opacity: 85%;
-    margin-top: 5vh;
+    height: auto;
+    opacity: 95%;
+    top: 110px;
   }
 
 

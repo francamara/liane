@@ -33,7 +33,7 @@ export default function Navbar() {
           setIsNavExpanded(!isNavExpanded)
         }}
       >
-        <DensitySmallIcon />
+        <DensitySmallIcon id='burger' />
       </IconButton>
       <img className='logoMovilLiane' src='/LIANE-logo.png' ></img>
 
@@ -44,7 +44,7 @@ export default function Navbar() {
       >
 
         <Grid
-          container direction={{ xs: 'column', sm: 'row' }}
+          container direction={{ xs: 'column', md: 'row' }}
           justifyContent='center' alignItems='center'
           spacing={{ xl: 6, lg: 4, md: 2 }}
           columns={8}>
