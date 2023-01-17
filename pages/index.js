@@ -2,8 +2,10 @@ import React from 'react'
 import Head from 'next/head'
 import BannerPodcast from '../components/BannerPodcast'
 import Header from '../components/Header'
-import Hero from '../components/Hero'
-import Mensaje from '../components/Mensaje'
+import Counseling from '../components/Counseling'
+import AboutMe from '../components/AboutMe'
+import Ayudarte from '../components/Ayudarte'
+import FAQ from '../components/FAQ'
 import Footer from '../components/Footer'
 import ContactForm from '../components/ContactForm'
 
@@ -23,8 +25,9 @@ export default function Home() {
       Cosas que podemos resolver sin necesidad de declarar mas componentes, solo con css o props de mui:
         - sillon de fondo (dimensiones y posicionamiento vertical responsive) */}
 
+      <Counseling />
 
-      <Hero />
+      <AboutMe />
       {/* Componentes:
         - introcounseling (nada complejo, comportamiento casi identico)
         - presentacion (responsive stack vertical a grid 2d con titulo y foto a la izq de texto)
@@ -32,20 +35,17 @@ export default function Home() {
       Cosas que podemos resolver sin necesidad de declarar mas componentes, solo con css o props de mui:
         - sillon de fondo (dimensiones y posicionamiento vertical responsive) */}
 
+
+      <Ayudarte />
+      <FAQ />
+
+
+      <ContactForm />
+
       <BannerPodcast />
       {/* Este por ahora quedo izi pizi mas adelante tendra que llevar links pero por ahora es un texto con titulo centrado,
       podría hasta ir aca mismo dentro del index sin ser componente, solo dos LnTypo */}
 
-      <Mensaje />
-      {/* La idea de lo que hacia este componente se movio al blog, esto pasaría a ser lo sig
-
-      Componentes:
-        - FAQ (falta diseño y data, hacer algo asi nomas y pedir contenido o descartar)
-        - ContactForm (responsive stack vertical a grid 2d con titulo y foto a la izq de texto)
-      Cosas que podemos resolver sin necesidad de declarar mas componentes, solo con css o props de mui:
-        - imagen de fondo oscurecida */}
-
-      <ContactForm />
 
       <Footer />
       {/* El footer ahora tiene dos partecinhas

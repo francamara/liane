@@ -10,9 +10,6 @@ function BannerPodcast() {
     <div id='bannerPodcast'>
       <Grid container direction={{ xs: 'column', sm: 'row' }} justifyContent='center' alignItems='center'>
         <Grid item sm='auto' container justifyContent='center'>
-          <img id='bannerPodcastPicture' src='/bannerPodcastPicture.svg' alt='fotoparaelpodcast'></img>
-        </Grid>
-        <Grid item sm='auto' container justifyContent='center'>
           <img id='bannerPodcastLogo' src='/Logo-para-banner-podcast.svg' />
         </Grid>
         <Grid item sm='auto' container justifyContent='center' alignItems='center'>

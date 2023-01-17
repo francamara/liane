@@ -9,11 +9,13 @@ import LnTypo from '../LnTypo'
 
 
 const navLinkData = [
-  { item: 'Inicio', ref: '/' },
-  { item: '¿Qué es counselling?', ref: '#hero' },
+  { item: 'Home', ref: '/', className: 'home' },
+  { item: '¿Qué es counseling?', ref: '#counseling' },
   { item: '¿Quién soy?', ref: '#aboutme' },
-  { item: '¿Cómo puedo ayudarte?', ref: '#mensaje' },
-  { item: 'El Pinche Mito', ref: '#bannerPodcast' },
+  { item: '¿Cómo puedo ayudarte?', ref: '#ayudarte' },
+  { item: 'El Pinche Mito', ref: '#elPincheMito' },
+  { item: 'FAQ', ref: '#faq' },
+  { item: 'BLOG', ref: '/' },
   { item: 'Contáctame', ref: '#footer' }
 ]
 
@@ -25,15 +27,26 @@ export default function Navbar() {
 
   return (
     <div className="nav">
-
-      <IconButton
-        className="navbarMobileButton"
-        onClick={() => {
-          setIsNavExpanded(!isNavExpanded)
-        }}
-      >
-        <DensitySmallIcon />
-      </IconButton>
+      <Grid container
+        justifyContent='flex-start'
+        alignItems='center'>
+        <Grid item xs={2}>
+          <IconButton
+            className="navbarMobileButton"
+            onClick={() => {
+              setIsNavExpanded(!isNavExpanded)
+            }}
+          >
+            <DensitySmallIcon id='burger' />
+          </IconButton>
+        </Grid>
+        <Grid item xs={2}>
+        </Grid>
+        <Grid item xs={5} sm={4}>
+          <img className='logoMovilLiane' src='/LIANE-logo.png' ></img>
+        </Grid>
+        <Grid item xs={3} sm={4}></Grid>
+      </Grid>
 
       <div
         className={
@@ -41,11 +54,18 @@ export default function Navbar() {
         }
       >
 
-        <Grid container direction={{ xs: 'column', sm: 'row' }} justifyContent='center' alignItems='center' spacing={{ xs: '0', sm: '24' }}>
+        <Grid
+          container direction={{ xs: 'column', md: 'row' }}
+          justifyContent='center' alignItems='center'
+          spacing={{ xl: 6, lg: 4, md: 2 }}
+          columns={8}>
           {/*Se mapea el array con las etiquetas y rutas del navbar para generar cada link*/}
           {navLinkData.map((navLink, i) => (
             <Grid item sm='auto' key={i}>
-              <Button id='myButton'>
+              <Button id='myButton'
+                onClick={() => {
+                  setIsNavExpanded(!isNavExpanded)
+                }}>
                 <Link href={navLink.ref} >
                   <LnTypo variant='h6' id='navbarText'>{navLink.item}</LnTypo>
                 </Link>
@@ -57,6 +77,6 @@ export default function Navbar() {
 
       </div>
       {/* nav menu code... */}
-    </div>
+    </div >
   )
 }

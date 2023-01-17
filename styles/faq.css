@@ -1,0 +1,10 @@
+#faq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3e6cca;
+  color: #fafafa;
+  width: 100vw;
+  height: 50vh;
+  padding: 100px;
+}

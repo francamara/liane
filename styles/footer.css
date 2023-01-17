@@ -1,9 +1,18 @@
 #footer {
-  background-color: #F4F0DB;
+  background-color: #000;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  gap: 20px;
+  color: #bfbaba;
+  padding-top: 10px;
+}
+
+.footerText {
+  color: #bfbaba;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
 }
 
 #footerSignature {

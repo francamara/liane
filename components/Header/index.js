@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../../components/Navbar'
-import ImageSlider from '../../components/Carrousel'
+import LnTypo from '../LnTypo'
+
 
 
 //TODO preguntar por orden de links, relevancia, SEO, etc
@@ -13,12 +14,13 @@ function Header() {
     <div>
       {/* div portada dibujito y nav */}
       <div id='portada' >
+        <div id='topofNavbar' >
+          <LnTypo > Liane Reinshagen Joho / Counselor</LnTypo>
+        </div>
         <div className='navbarMobile'>
           <Navbar />
         </div>
-        <div id='carrouselContainer'>
-          <ImageSlider />
-        </div>
+
         {/* contenedor de firma  <div id='signatureCont'>
           <img className='signatureLiane' src='/Logo-Liane.svg' />
         </div> */}

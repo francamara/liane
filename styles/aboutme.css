@@ -1,0 +1,40 @@
+#aboutme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3e6cca;
+  color: #fafafa;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.aboutMeBackground {
+  background-color: #3e6cca;
+  background-size: 80vh 100vw;
+  background-repeat: no-repeat;
+
+}
+
+#hero {
+  display: flex;
+  align-items: center;
+}
+
+#profilePicture {
+  display: flex;
+  justify-content: center;
+  border-radius: 30vh;
+  width: 15vw;
+  height: auto;
+}
+
+#upperSection {
+  display: flex;
+
+}
+
+#lowerSection {
+  display: flex;
+}
