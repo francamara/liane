@@ -23,6 +23,7 @@ let theme = createTheme({
 })
 
 theme.typography.h6 = {
+  fontFamily: 'Caecilia',
   fontSize: '1.2rem',
   '@media (max-width:1200px)': { fontSize: '1rem' },
   '@media (max-width:1000px)': { fontSize: '0.8rem' }

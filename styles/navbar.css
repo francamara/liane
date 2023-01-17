@@ -50,7 +50,7 @@
   }
 } */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
 
   .navbarMobile {
     display: block;
@@ -85,7 +85,7 @@
     text-transform: none;
     display: flex;
     justify-content: flex-start;
-    align-items: centers;
+    align-items: center;
   }
 
   #burger {
@@ -147,6 +147,105 @@
   .navbar Button {
     display: block;
   }
+}
+
+@media screen and (max-width: 600px) {
+  .navbarMobile {
+    display: block;
+  }
+
+  .logoMovilLiane {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    margin: auto;
+    padding: 7px;
+  }
+
+  .nav {
+    background: #3e6cca;
+    display: flex;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 40;
+  }
+
+
+
+  .navbarMobileButton {
+    color: #fafafa;
+    border-radius: 0px;
+    /* font-weight: bold;
+    text-decoration: none; */
+    padding: 4px;
+    text-transform: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  #burger {
+    font-size: xx-large;
+
+  }
+
+  .navbarMobileButton:hover {
+    background: #5d91fa;
+    color: #fafafa;
+  }
+
+  .navbarmobile:active {
+    background-color: #437ef6;
+
+  }
+
+
+
+  .navbar {
+
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: #3e6cca;
+    border-top: 1px solid;
+    gap: 20px;
+    border-bottom: 1px solid #197072;
+    border-left: 1px solid #197072;
+    border-right: 1px solid #197072;
+    z-index: 5;
+    display: none;
+    opacity: 100%;
+  }
+
+  #myButton {
+    padding: 14px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    border: 0.5px solid #fafafa;
+  }
+
+  #navbarText {
+    color: #fafafa;
+    font-weight: bold;
+    opacity: 100%;
+  }
+
+  .navbar.expanded {
+    display: block;
+    background: #3e6cca;
+    height: auto;
+    opacity: 95%;
+    top: 110px;
+  }
+
+
+  .navbar Button {
+    display: block;
+  }
+
 }
 
 @media screen and (min-width: 2200px) {

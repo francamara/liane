@@ -39,8 +39,24 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   #topofNavbar {
     display: none;
+  }
+
+  #portada {
+    background-size: 100% 600px;
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #topofNavbar {
+    display: none;
+  }
+
+  #portada {
+    background-size: 100% 400px;
+    height: 400px;
   }
 }

@@ -27,15 +27,26 @@ export default function Navbar() {
 
   return (
     <div className="nav">
-      <IconButton
-        className="navbarMobileButton"
-        onClick={() => {
-          setIsNavExpanded(!isNavExpanded)
-        }}
-      >
-        <DensitySmallIcon id='burger' />
-      </IconButton>
-      <img className='logoMovilLiane' src='/LIANE-logo.png' ></img>
+      <Grid container
+        justifyContent='flex-start'
+        alignItems='center'>
+        <Grid item xs={2}>
+          <IconButton
+            className="navbarMobileButton"
+            onClick={() => {
+              setIsNavExpanded(!isNavExpanded)
+            }}
+          >
+            <DensitySmallIcon id='burger' />
+          </IconButton>
+        </Grid>
+        <Grid item xs={2}>
+        </Grid>
+        <Grid item xs={5} sm={4}>
+          <img className='logoMovilLiane' src='/LIANE-logo.png' ></img>
+        </Grid>
+        <Grid item xs={3} sm={4}></Grid>
+      </Grid>
 
       <div
         className={
@@ -51,7 +62,10 @@ export default function Navbar() {
           {/*Se mapea el array con las etiquetas y rutas del navbar para generar cada link*/}
           {navLinkData.map((navLink, i) => (
             <Grid item sm='auto' key={i}>
-              <Button id='myButton'>
+              <Button id='myButton'
+                onClick={() => {
+                  setIsNavExpanded(!isNavExpanded)
+                }}>
                 <Link href={navLink.ref} >
                   <LnTypo variant='h6' id='navbarText'>{navLink.item}</LnTypo>
                 </Link>
@@ -63,6 +77,6 @@ export default function Navbar() {
 
       </div>
       {/* nav menu code... */}
-    </div>
+    </div >
   )
 }
