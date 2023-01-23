@@ -8,8 +8,21 @@ import Ayudarte from '../components/Ayudarte'
 import FAQ from '../components/FAQ'
 import Footer from '../components/Footer'
 import ContactForm from '../components/ContactForm'
+import { IconButton } from '@mui/material'
+import Fab from '@mui/material/Fab'
+import WhatsAppIcon from '@mui/icons-material/WhatsApp'
 
 export default function Home() {
+
+  const fabStyle = {
+    margin: 0,
+    top: 20,
+    right: 20,
+    bottom: 'auto',
+    left: 'auto',
+    position: 'fixed',
+  }
+
   return (
     <div>
       <Head>
@@ -17,6 +30,12 @@ export default function Home() {
         <meta name="description" content="Sitio oficial de Liane" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Fab color='primary' sx={fabStyle}>
+        <IconButton color='neutral' href='https://api.whatsapp.com/send?phone=5491149899116'>
+          <WhatsAppIcon />
+        </IconButton>
+      </Fab>
 
       <Header />
       {/* Componentes:
