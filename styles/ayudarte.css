@@ -20,9 +20,6 @@
 
 /* la imagen de ayudarte intro cambia de tamaño manualmente con el siguiente input media queries */
 
-
-
-
 #ayudarteList {
   background-color: #3e6caa;
   color: #fafafa;
@@ -50,4 +47,14 @@
   padding-right: 10vw;
   padding-bottom: 40px;
   padding-top: 100px;
+}
+
+@media screen and (max-width: 900px) {
+  .ayudarteIntro {
+    padding-top: 100px;
+  }
+
+  #elPincheMito {
+    padding-top: 60px;
+  }
 }

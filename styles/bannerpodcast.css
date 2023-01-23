@@ -24,7 +24,12 @@
 
 @media screen and (max-width: 600px) {
   #bannerPodcastLogo {
-    height: 300px;
-    width: 100vw;
+    height: 200px;
+    width: auto;
+  }
+
+  #bannerSloganPodcast {
+    color: #fafafa;
+    padding-bottom: 1em;
   }
 }

@@ -34,6 +34,7 @@
 .contactform {
   margin: 0em 20%;
   padding-bottom: 1em;
+  padding-top: 1em;
 }
 
 .formcontainer {
@@ -48,6 +49,10 @@
 @media screen and (max-width: 900px) {
   .formcontainer {
     min-height: 350px;
+  }
+
+  #footerhomebutton {
+    display: none;
   }
 
   #footerSignature {

@@ -1,6 +1,6 @@
 import React from 'react'
 import LnTypo from '../LnTypo'
-import { Grid } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
 
 function Ayudarte() {
   return (
@@ -13,7 +13,7 @@ function Ayudarte() {
           spacing={4}>
 
           <Grid item sm={12}>
-            <LnTypo variant='h4' id='subtitleBlue'>¿COMO PUEDO AYUDARTE?</LnTypo>
+            <Typography variant='h4' id='subtitleBlue' align='left'>¿COMO PUEDO AYUDARTE?</Typography>
           </Grid>
           <Grid item sm={10}
             alignContent='flex-end'>

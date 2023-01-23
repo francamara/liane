@@ -8,7 +8,7 @@ import LnTypo from '../LnTypo'
 function BannerPodcast() {
   return (
     <div id='bannerPodcast'>
-      <Grid container direction={{ xs: 'column', sm: 'row' }} justifyContent='center' alignItems='center'>
+      <Grid container direction='row' justifyContent='center' alignItems='center'>
         <Grid item sm='auto' container justifyContent='center'>
           <img id='bannerPodcastLogo' src='/Logo-para-banner-podcast.svg' />
         </Grid>

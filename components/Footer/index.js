@@ -19,7 +19,7 @@ function Footer() {
         spacing={2}>
 
 
-        <Grid item sm={3}
+        <Grid item sm={3} id='footerhomebutton'
           textAlign='center'
         >
           <Link href="/">

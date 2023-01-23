@@ -1,5 +1,5 @@
 import LnTypo from '../LnTypo'
-import { Grid, Paper } from '@mui/material'
+import { Grid, Paper, Typography } from '@mui/material'
 import React from 'react'
 
 
@@ -18,8 +18,8 @@ function Counseling() {
       >
 
         <Grid item sm={8} md={8}>
-          <LnTypo variant='h5' id='subtitleBlue'>¿QUÉ ES EL COUNSELING?
-          </LnTypo>
+          <Typography variant='h5' id='subtitleBlue' align='left'>¿QUÉ ES EL COUNSELING?
+          </Typography>
         </Grid>
         <Grid item sm={4} md={4}></Grid>
 

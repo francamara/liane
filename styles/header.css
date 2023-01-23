@@ -20,43 +20,14 @@
 
 }
 
-#signatureCont {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  height: 80vh;
-}
-
-.signatureLiane {
-  width: auto;
-  height: 40vh;
-}
-
-
-@media screen and (min-width: 2200px) {
-  #topofNavbar {
-    height: 90px;
-  }
-}
-
 @media screen and (max-width: 900px) {
   #topofNavbar {
     display: none;
   }
 
   #portada {
-    background-size: 100% 600px;
-    height: 600px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  #topofNavbar {
-    display: none;
-  }
-
-  #portada {
-    background-size: 100% 400px;
-    height: 400px;
+    background-size: cover;
+    background-position: center center;
+    height: 60vh;
   }
 }
