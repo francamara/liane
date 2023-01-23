@@ -37,11 +37,19 @@
 }
 
 .formcontainer {
+  display: flex;
+  align-items: center;
+  min-height: 750px;
   background-image: url(https://wallpapercrafter.com/sizes/1920x1080/273537-coffee-shop-coffe-cup-cup-and-saucer-and-table-hd.jpg);
   background-size: cover;
+  background-position: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
+  .formcontainer {
+    min-height: 350px;
+  }
+
   #footerSignature {
     height: auto;
     width: 90vw;

@@ -1,5 +1,5 @@
 #bannerPodcast {
-  height: 20vh;
+  min-height: 200px;
   display: flex;
   background: #255fca;
   justify-content: center;
@@ -8,16 +8,11 @@
 }
 
 #bannerPodcastLogo {
-  height: 20vh;
+  height: 200px;
   width: auto;
   gap: 10px;
   margin-left: 20px;
   margin-right: 20px;
-}
-
-#bannerPodcastPicture {
-  height: 20vh;
-  width: auto;
 }
 
 #bannerSloganPodcast {
@@ -29,17 +24,7 @@
 
 @media screen and (max-width: 600px) {
   #bannerPodcastLogo {
-    height: auto;
+    height: 300px;
     width: 100vw;
-  }
-
-  #bannerPodcastPicture {
-    height: 40vh;
-    width: auto;
-  }
-
-  .signatureLiane {
-    width: auto;
-    height: 80vw;
   }
 }

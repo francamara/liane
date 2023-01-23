@@ -20,13 +20,13 @@ function AboutMe() {
           direction='column'
           alignItems='center'
           justifyContent='center'
-          sm={6}
+          md={6}
           spacing={2}>
 
-          <Grid item sm={12} >
+          <Grid item md={12} >
             <LnTypo variant='h3'>¿Quien Soy?</LnTypo>
           </Grid>
-          <Grid item sm={12}>
+          <Grid item md={12}>
             <img
               id='profilePicture'
               alt='liane'
@@ -41,7 +41,7 @@ function AboutMe() {
           direction='column'
           alignItems='center'
           justifyContent='center'
-          sm={6}
+          md={6}
           spacing={2}>
           <Grid item sm={12}>
             <LnTypo variant='body1' id='upperSection'>

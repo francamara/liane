@@ -6,14 +6,15 @@
 .ayudarteIntro {
   background-image:
     url(../public/armchair.jpg);
-  background-size: 100vw 700px;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center;
+  min-height: 750px;
   color: #000;
   padding-left: 10vw;
   padding-right: 10vw;
   padding-bottom: 40px;
-  padding-top: 40px;
+  padding-top: 200px;
 }
 
 
@@ -21,12 +22,6 @@
 
 
 
-#ayudarteSofa {
-  position: fixed;
-  height: 100%;
-  width: auto;
-  z-index: 1;
-}
 
 #ayudarteList {
   background-color: #3e6caa;
@@ -34,7 +29,8 @@
   padding-left: 10vw;
   padding-right: 10vw;
   padding-bottom: 40px;
-  padding-top: 40px;
+  padding-top: 70px;
+  min-height: 500px;
 }
 
 #ayudarteList ul {
@@ -43,52 +39,15 @@
 
 #footsandwoman {
   width: 100vw;
-  height: 500px;
+  height: auto;
 }
 
 
 #elPincheMito {
   background-color: #cac5c1;
+  min-height: 400px;
   padding-left: 10vw;
   padding-right: 10vw;
   padding-bottom: 40px;
-  padding-top: 40px;
-}
-
-@media screen and (min-width:2000px) {
-  #footsandwoman {
-    height: 800px;
-  }
-}
-
-@media screen and (min-width:1400px) {
-  .ayudarteIntro {
-    background-size: 100vw 900px;
-    background-position-y: -450px;
-  }
-
-  #footsandwoman {
-    height: 700px;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .ayudarteIntro {
-    background-size: 100vw 700px;
-  }
-
-  #footsandwoman {
-    height: 360px;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .ayudarteIntro {
-    background-size: 900px 1000px;
-    background-position-x: left;
-  }
-
-  #footsandwoman {
-    height: 250px;
-  }
+  padding-top: 100px;
 }
