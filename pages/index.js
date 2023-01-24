@@ -8,6 +8,7 @@ import Ayudarte from '../components/Ayudarte'
 import FAQ from '../components/FAQ'
 import Footer from '../components/Footer'
 import ContactForm from '../components/ContactForm'
+import ScrollToTop from '../components/ScrollToTop'
 import { IconButton } from '@mui/material'
 import Fab from '@mui/material/Fab'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp'
@@ -16,7 +17,7 @@ export default function Home() {
 
   const fabStyle = {
     margin: 0,
-    top: 20,
+    top: 40,
     right: 20,
     bottom: 'auto',
     left: 'auto',
@@ -36,6 +37,8 @@ export default function Home() {
           <WhatsAppIcon />
         </IconButton>
       </Fab>
+
+      <ScrollToTop showBelow={200} />
 
       <Header />
       {/* Componentes:

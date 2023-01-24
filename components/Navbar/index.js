@@ -10,12 +10,12 @@ import LnTypo from '../LnTypo'
 
 const navLinkData = [
   { item: 'Home', ref: '/', className: 'home' },
-  { item: '¿Qué es counseling?', ref: '#counseling' },
-  { item: '¿Quién soy?', ref: '#aboutme' },
-  { item: '¿Cómo puedo ayudarte?', ref: '#ayudarte' },
-  { item: 'El Pinche Mito', ref: '#elPincheMito' },
-  { item: 'FAQ', ref: '#faq' },
-  { item: 'BLOG', ref: '/' },
+  { item: '¿Qué es counseling?', ref: '/#counseling' },
+  { item: '¿Quién soy?', ref: '/#aboutme' },
+  { item: '¿Cómo puedo ayudarte?', ref: '/#ayudarte' },
+  { item: 'El Pinche Mito', ref: '/#elPincheMito' },
+  { item: 'FAQ', ref: '/#faq' },
+  { item: 'BLOG', ref: '/blog' },
   { item: 'Contáctame', ref: '#footer' }
 ]
 
