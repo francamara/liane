@@ -33,7 +33,7 @@ export default function Home() {
       </Head>
 
       <Fab color='primary' sx={fabStyle}>
-        <IconButton color='neutral' href='https://api.whatsapp.com/send?phone=5491149899116'>
+        <IconButton color='neutral' href='https://api.whatsapp.com/send?phone=5491149899116' target="_blank">
           <WhatsAppIcon />
         </IconButton>
       </Fab>
