@@ -9,6 +9,9 @@
     "lint": "eslint .",
     "prepare": "husky install"
   },
+  "engines": {
+    "node": "16.13.0"
+  },
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^35.2.1",
     "@ckeditor/ckeditor5-react": "^5.0.2",
