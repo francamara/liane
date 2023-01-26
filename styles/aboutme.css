@@ -1,0 +1,24 @@
+#aboutme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  background-color: #3e6cca;
+  color: #fafafa;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.aboutMeBackground {
+  background-color: #3e6cca;
+}
+
+#profilePicture {
+  display: flex;
+  justify-content: center;
+  border-radius: 24vh;
+  width: 12vw;
+  height: auto;
+}

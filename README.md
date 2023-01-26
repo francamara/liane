@@ -57,4 +57,4 @@ Reasons to commit:
 
 ## TODO
 
-- Add docker to start DB (2nd stage of development)
+- Set-up prisma CRUDs

@@ -1,0 +1,33 @@
+#portada {
+  background-image: url(../public/sillon-web-liane-con-logo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+
+}
+
+/*.headerPicture */
+
+#topofNavbar {
+  background: #cac5c1;
+  color: #55514e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  height: 45px;
+
+}
+
+@media screen and (max-width: 900px) {
+  #topofNavbar {
+    display: none;
+  }
+
+  #portada {
+    background-size: cover;
+    background-position: center center;
+    height: 60vh;
+  }
+}

@@ -1,0 +1,19 @@
+.wrapper {
+  background-color: #cac5c1;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  padding-right: 10vw;
+  padding-left: 10vw;
+}
+
+.blogPost {
+  background-color: #f3ece7;
+  color: #111;
+  padding: 25px;
+
+}
+
+.postSignature {
+  padding: 20px;
+}

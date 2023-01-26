@@ -1,0 +1,72 @@
+#footer {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  color: #bfbaba;
+  padding-top: 10px;
+}
+
+.footerText {
+  color: #bfbaba;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+}
+
+#footerSignature {
+  display: flex;
+  align-self: flex-end;
+  justify-content: flex-end;
+  max-width: 100%;
+  height: auto;
+}
+
+#footerLogoPodcast {
+  display: flex;
+  align-self: flex-start;
+  justify-content: flex-start;
+  height: 20vh;
+  width: auto;
+}
+
+.contactform {
+  margin: 0em 20%;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+.formcontainer {
+  display: flex;
+  align-items: center;
+  min-height: 750px;
+  background-image: url(https://wallpapercrafter.com/sizes/1920x1080/273537-coffee-shop-coffe-cup-cup-and-saucer-and-table-hd.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 900px) {
+  .formcontainer {
+    min-height: 350px;
+  }
+
+  #footerhomebutton {
+    display: none;
+  }
+
+  #footerSignature {
+    height: auto;
+    width: 90vw;
+  }
+
+  #footerLogoPodcast {
+    height: auto;
+    width: 90vw;
+  }
+
+  .contactform {
+    margin: 0em 12%;
+    padding-bottom: 1em;
+  }
+}

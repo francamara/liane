@@ -1,0 +1,35 @@
+#bannerPodcast {
+  min-height: 200px;
+  display: flex;
+  background: #255fca;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+#bannerPodcastLogo {
+  height: 200px;
+  width: auto;
+  gap: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#bannerSloganPodcast {
+  color: #fafafa;
+}
+
+
+/*Responsive section of the BannerPodcast component */
+
+@media screen and (max-width: 600px) {
+  #bannerPodcastLogo {
+    height: 200px;
+    width: auto;
+  }
+
+  #bannerSloganPodcast {
+    color: #fafafa;
+    padding-bottom: 1em;
+  }
+}

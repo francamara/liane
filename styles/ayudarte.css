@@ -1,0 +1,60 @@
+#ayudarte {
+  display: flex;
+  flex-direction: column;
+}
+
+.ayudarteIntro {
+  background-image:
+    url(../public/armchair.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 750px;
+  color: #000;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-bottom: 40px;
+  padding-top: 200px;
+}
+
+
+/* la imagen de ayudarte intro cambia de tamaño manualmente con el siguiente input media queries */
+
+#ayudarteList {
+  background-color: #3e6caa;
+  color: #fafafa;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-bottom: 40px;
+  padding-top: 70px;
+  min-height: 500px;
+}
+
+#ayudarteList ul {
+  padding-left: 0vw;
+}
+
+#footsandwoman {
+  width: 100vw;
+  height: auto;
+}
+
+
+#elPincheMito {
+  background-color: #cac5c1;
+  min-height: 400px;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-bottom: 40px;
+  padding-top: 100px;
+}
+
+@media screen and (max-width: 900px) {
+  .ayudarteIntro {
+    padding-top: 100px;
+  }
+
+  #elPincheMito {
+    padding-top: 60px;
+  }
+}

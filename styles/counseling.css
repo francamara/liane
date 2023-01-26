@@ -1,0 +1,25 @@
+#counseling {
+  background-color: #cac5c1;
+  color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 500px;
+  padding: 40px;
+  padding-right: 10vw;
+  padding-left: 10vw;
+}
+
+#counselingQuote {
+  background-color: #f3ece7;
+  color: #111;
+  padding: 25px;
+
+}
+
+#quoteAuthor {
+  text-align: right;
+  padding: 20px;
+
+}
