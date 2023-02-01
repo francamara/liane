@@ -13,9 +13,9 @@ function Ayudarte() {
           spacing={4}>
 
           <Grid item sm={12}>
-            <Typography variant='h4' id='subtitleBlue' align='left'>¿CÓbMO PUEDO AYUDARTE?</Typography>
+            <Typography variant='h4' id='subtitleBlue' align='left'>¿CÓMO PUEDO AYUDARTE?</Typography>
           </Grid>
-          <Grid item={5}></Grid>
+          <Grid item sm={5}></Grid>
           <Grid item sm={7}
             alignContent='flex-end'>
             <LnTypo variant='body1'> En las consultas conmigo, el paso y el camino los decides tú.
@@ -51,7 +51,7 @@ function Ayudarte() {
             <LnTypo>Algunos de los
               temas que he trabajado en mi consultorio son:</LnTypo>
           </Grid>
-          <Grid sm={12}>
+          <Grid item sm={12}>
             <ul>
               <li>-Conclusión de tesis o proyectos laborales</li>
               <li>-Mudanzas o reubicaciones</li>
