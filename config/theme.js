@@ -29,5 +29,8 @@ theme.typography.h6 = {
   '@media (max-width:1000px)': { fontSize: '0.8rem' }
 }
 
+theme.typography.body1 = {
+  '@media (max-width:1000px)': { textAlign: 'left' }
+}
 /*theme = responsiveFontSizes(theme) */
 export default theme

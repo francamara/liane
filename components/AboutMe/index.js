@@ -24,7 +24,7 @@ function AboutMe() {
           spacing={2}>
 
           <Grid item md={12} >
-            <LnTypo variant='h3'>¿Quien Soy?</LnTypo>
+            <LnTypo variant='h3'>¿Quién Soy?</LnTypo>
           </Grid>
           <Grid item md={12}>
             <img
