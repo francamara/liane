@@ -13,16 +13,17 @@ function Ayudarte() {
           spacing={4}>
 
           <Grid item sm={12}>
-            <Typography variant='h4' id='subtitleBlue' align='left'>¿COMO PUEDO AYUDARTE?</Typography>
+            <Typography variant='h4' id='subtitleBlue' align='left'>¿CÓbMO PUEDO AYUDARTE?</Typography>
           </Grid>
-          <Grid item sm={10}
+          <Grid item={5}></Grid>
+          <Grid item sm={7}
             alignContent='flex-end'>
             <LnTypo variant='body1'> En las consultas conmigo, el paso y el camino los decides tú.
               Yo te acompaño y te apoyo con toda mi
               atención y la experiencia de mis horas de vuelo. Tus problemas e inquietudes merecen un espacio en
               donde atenderlos: a tu ritmo; a tus tiempos;
               en un espacio seguro, cálido, respetuoso y confidencial.
-              Imagínate que te ofrezco una mesa enorme bien iluminada en la que puedes volcar y vaciar tu mochila,
+              Imagínate que te ofrezco una mesa enorme, bien iluminada en la que puedes volcar y vaciar tu mochila,
               tus bolsillos, tu mente, tu corazón, tu alma.
               Te has llenado de cosas que te pesan y no te dejan
               encontrar lo que sí necesitas
