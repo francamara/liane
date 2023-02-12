@@ -36,7 +36,7 @@ function Counseling() {
           <Typography variant='body1' align='left'>
             El counseling (consultoría psicológica en español)
             es una profesión de ayuda para el bienestar y
-            salud emociona y mental. Hace énfasis en la escucha activa, la aceptación positiva incondicional y
+            salud emocional y mental. Hace énfasis en la escucha activa, la aceptación positiva incondicional y
             la congruencia del profesional que la ejerce. El enfoque es horizontal. No hay  &quot; pacientes &quot;
             que con
             paciencia tienen que esperar cura desde una autoridad superior. Es un espacio terapéutico de
