@@ -15,7 +15,7 @@ const navLinkData = [
   { item: '¿Cómo puedo ayudarte?', ref: '/#ayudarte' },
   { item: 'El Pinche Mito', ref: '/#elPincheMito' },
   { item: 'FAQ', ref: '/#faq' },
-  { item: 'BLOG', ref: '/blog' },
+  //{ item: 'BLOG', ref: '/blog' },
   { item: 'Contáctame', ref: '#footer' }
 ]
 
