@@ -5,9 +5,9 @@ import Header from '../components/Header'
 import Counseling from '../components/Counseling'
 import AboutMe from '../components/AboutMe'
 import Ayudarte from '../components/Ayudarte'
-import FAQ from '../components/FAQ'
+// import FAQ from '../components/FAQ'
 import Footer from '../components/Footer'
-import ContactForm from '../components/ContactForm'
+// import ContactForm from '../components/ContactForm'
 import ScrollToTop from '../components/ScrollToTop'
 import { IconButton } from '@mui/material'
 import Fab from '@mui/material/Fab'
@@ -59,10 +59,10 @@ export default function Home() {
 
 
       <Ayudarte />
-      <FAQ />
+      {/* <FAQ /> */}
 
 
-      <ContactForm />
+      {/* <ContactForm /> */}
 
       <BannerPodcast />
       {/* Este por ahora quedo izi pizi mas adelante tendra que llevar links pero por ahora es un texto con titulo centrado,
